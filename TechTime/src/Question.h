@@ -8,6 +8,7 @@ public:
     void setAnswered(int i);
     void setPosition(ofVec2f p);
     void setText(std::string newtext);
+    void setDecade(int dec)
     void resetCorners();
     void update();
     void draw();
@@ -22,6 +23,7 @@ private:
     ofVec2f BRpos;
 
     int answered;
+    int decade;
 
 
 };
