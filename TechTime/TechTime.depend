@@ -1484,10 +1484,11 @@
 	"ofMain.h"
 	"ofApp.h"
 
-1431404354 c:\openframeworks\apps\apushtechtime\techtime\src\ofapp.h
+1431411077 c:\openframeworks\apps\apushtechtime\techtime\src\ofapp.h
 	"ofMain.h"
 	"Answer.h"
 	"AnswerManager.h"
+	"QuestionManager.h"
 
 1431404555 source:c:\openframeworks\apps\apushtechtime\techtime\src\ofapp.cpp
 	"ofApp.h"
@@ -1504,4 +1505,11 @@
 
 1431410778 c:\openframeworks\apps\apushtechtime\techtime\src\question.h
 	"ofMain.h"
+
+1431410811 source:c:\openframeworks\apps\apushtechtime\techtime\src\questionmanager.cpp
+	"QuestionManager.h"
+
+1431410714 c:\openframeworks\apps\apushtechtime\techtime\src\questionmanager.h
+	"ofMain.h"
+	"Question.h"
 

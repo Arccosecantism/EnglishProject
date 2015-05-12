@@ -2,6 +2,7 @@
 #include "ofMain.h"
 #include "Answer.h"
 #include "AnswerManager.h"
+#include "QuestionManager.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,6 +22,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
         AnswerManager answerMan;
+        QuestionManager questionMan;
 
         ofVec2f mousePos;
         bool pressed;//true if mouse button has been pressed down

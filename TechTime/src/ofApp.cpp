@@ -9,11 +9,8 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    if (clicked == true)
-    {
-        std::cout << "here" << std::endl;
-    }
     answerMan.update(mousePos, clicked, pressed);
+    questionMan.update();
 
 
     if(pressed != true)
@@ -27,6 +24,7 @@ void ofApp::update(){
 void ofApp::draw(){
 
     answerMan.draw();
+    questionMan.draw();
     ofSetColor(ofColor::red);
     ofCircle(400,400,2);
     ofSetColor(ofColor::white);
