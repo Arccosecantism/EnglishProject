@@ -1,4 +1,5 @@
 #include "GameManager.h"
+#include <sstream>
 
 GameManager::GameManager()
 {
@@ -9,6 +10,37 @@ GameManager::GameManager()
     else
     {
         std::cout << "failed to load image GameBG" << std::endl;
+    }
+}
+
+void GameManager::fillQATexts(std::string filename)
+{
+    std::vector<std::string> questions;
+    std::vector<std::string> answers;
+    std::string line;
+    bool QA = false;
+   // bool newQuestion = false;
+    std::ifstream QAtexts("../bin/data/QuestionAnswers.txt");
+    
+    if (QAtexts.is_open())
+    {
+        while(getline(QAtexts, line))
+        {
+            
+            if (line = "-----")
+            {
+                //newQuestion = true;
+            }
+            else if (line[0] == 'Q' and line[1] == 'Q')
+            {
+                QA = false;
+                
+            }
+        }
+        }
+        
+        
+        
     }
 }
 
