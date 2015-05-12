@@ -9,7 +9,7 @@ Question::Question(ofVec2f pos, std::string qtex, ofTrueTypeFont& ffont, ofTextu
     backgro = &fbackgro;
     rightAns = &frightAns;
     wrongAns = &fwrongAns;
-
+    decade = 600;
 
     resetCorners();
 }
@@ -37,6 +37,11 @@ void Question::resetCorners()
 void Question::setText(std::string newtext)
 {
     text = newtext;
+}
+
+void Question::setDecade(int dec)
+{
+    decade = dec;
 }
 
 void Question::update()
