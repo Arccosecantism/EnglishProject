@@ -1,21 +1,39 @@
 #include "Answer.h"
 
-Answer::Answer(ofVec2f pos, std::string tex, ofTrueTypeFont& f)
+Answer::Answer(ofVec2f pos, std::string tex, ofTrueTypeFont& f, ofTexture& bg, bool cor)
 {
     position = pos;
     text = tex;
     font = &f;
+    backgro = &bg;
     resetCorners();
+    colors.push_back(ofColor::black);
+    colors.push_back(ofColor(0,0,205));
+    colors.push_back(ofColor(16,52,166));
+    colors.push_back(ofColor::red);
+    colors.push_back(ofColor::green);
+    correct = cor;
+    colorPick = 0;
 }
 
 
 void Answer::setPosition(ofVec2f p)
 {
-    pos = p;
+    position = p;
     resetCorners();
 }
 
-int Answer::getClickedDataInt(ofVec2f& mousepos, bool& clicked, bool& pressed)
+void Answer::setText(std::string tex)
+{
+    text = tex;
+}
+
+void Answer::setCorrect(bool b)
+{
+    correct = b;
+}
+
+int Answer::getClickedDataInt(ofVec2f& mousePos, bool& clicked, bool& pressed)
 {
     if (mousePos.x < TLpos.x || mousePos.x > BRpos.x ||
         mousePos.y < TLpos.y || mousePos.y > BRpos.y)
@@ -42,11 +60,29 @@ int Answer::getClickedDataInt(ofVec2f& mousepos, bool& clicked, bool& pressed)
 
 void Answer::resetCorners()
 {
-    TLpos = pos;
-    BRpos = ofVec2f(pos.x + font->stringWidth(text), pos.y + font->stringHeight(text));
+    TLpos = ofVec2f(position.x - backgro->getWidth()/2, position.y - backgro->getHeight()/2);
+    BRpos = ofVec2f(position.x + backgro->getWidth()/2, position.y + backgro->getHeight()/2);
+
 }
 
-void update()
+void Answer::update(ofVec2f& mousepos, bool& clicked, bool& pressed)
+{
+    if (colorPick != 3 and colorPick != 4)
+    {
+        int state = getClickedDataInt(mousepos, clicked, pressed);
+        colorPick = state;
+        if (colorPick == 3 and correct == true)
+        {
+            colorPick = 4;
+        }
+    }
+}
+
+void Answer::draw()
 {
 
+    backgro->draw(TLpos);
+    ofSetColor(colors[colorPick]);
+    font->drawString(text, position.x - font->stringWidth(text)/2, position.y + font->stringHeight(text)/2);
+    ofSetColor(ofColor::white);
 }
