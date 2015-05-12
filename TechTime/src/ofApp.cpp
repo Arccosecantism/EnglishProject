@@ -9,8 +9,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    answerMan.update(mousePos, clicked, pressed);
-    questionMan.update();
+    gameMan.update(mousePos, clicked, pressed);
 
 
     if(pressed != true)
@@ -23,8 +22,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-    answerMan.draw();
-    questionMan.draw();
+    gameMan.draw();
     ofSetColor(ofColor::red);
     ofCircle(400,400,2);
     ofSetColor(ofColor::white);

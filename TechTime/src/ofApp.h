@@ -1,8 +1,6 @@
 #pragma once
 #include "ofMain.h"
-#include "Answer.h"
-#include "AnswerManager.h"
-#include "QuestionManager.h"
+#include "GameManager.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,8 +19,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-        AnswerManager answerMan;
-        QuestionManager questionMan;
+        GameManager gameMan;
 
         ofVec2f mousePos;
         bool pressed;//true if mouse button has been pressed down
