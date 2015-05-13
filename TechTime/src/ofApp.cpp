@@ -2,8 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
-
+    ofSetFrameRate(30);
 
 }
 
@@ -23,9 +22,7 @@ void ofApp::update(){
 void ofApp::draw(){
 
     gameMan.draw();
-    ofSetColor(ofColor::red);
-    ofCircle(400,400,2);
-    ofSetColor(ofColor::white);
+
 }
 
 //--------------------------------------------------------------

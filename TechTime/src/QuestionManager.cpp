@@ -38,6 +38,7 @@ QuestionManager::QuestionManager()
     }
 
     defaultFont.loadFont("Obelisk-MMXV.ttf", 20);
+    answered = 0;
 }
 
 void QuestionManager::setQuestionText(std::string newtext, int i)
@@ -45,16 +46,41 @@ void QuestionManager::setQuestionText(std::string newtext, int i)
     questionVector[i].setText(newtext);
 }
 
+void QuestionManager::setQuestionDecade(int dec, int i)
+{
+    questionVector[i].setDecade(dec);
+}
+
 void QuestionManager::setQuestionAnswered(int ans, int i)
 {
     questionVector[i].setAnswered(ans);
 }
+
+void QuestionManager::setAnswered(int i)
+{
+    answered = i;
+}
+
+void QuestionManager::resetQuestions()
+{
+    for (int i = 0 ; i < questionVector.size(); i++)
+    {
+        questionVector[i].reset();
+    }
+}
+
+int QuestionManager::getQuestionNum()
+{
+    return questionNum;
+}
+
 
 void QuestionManager::update()
 {
     for (int i = 0; i < questionVector.size(); i++)
     {
         questionVector[i].update();
+        questionVector[i].setAnswered(answered);
     }
 }
 

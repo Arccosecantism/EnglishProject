@@ -10,6 +10,11 @@ public:
 //    void setBGTextureByString(std::string bgnam);
 //    void setFontByString(std::string bgnam);
     void setAnswerText(std::string newtext, int i);
+    void setCorrect(bool b, int i);
+    int getAnswered();
+    int getAnswerNum();
+
+    void resetAnswers();
     void update(ofVec2f& mousePos, bool& clicked, bool& pressed);
     void draw();
 

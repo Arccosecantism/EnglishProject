@@ -1,23 +1,26 @@
 #pragma once
+#include "ofMain.h"
 
 class TriviaSet
 {
   public:
     TriviaSet();
-    void addQuestion(std::string qtex);
+    void addQuestionText(std::string qtex);
     void alterQuestion(std::string nqtex, int i);
-    
-    void addAnswer(std::string atex);
+
+    void addAnswerText(std::string atex);
     void alterAnswer(std::string natex, int i);
-    
+
     void setDecade(int ndec);
-    
-    void getQuestionsVector();
-    void getAnswerVector();
-    void getDecade();
-    
+
+    std::vector<std::string> getQuestionVector();
+    std::vector<std::string> getAnswerVector();
+//    int getQuestionVectorSize();
+//    int getAnswerVectorSize();
+    int getDecade();
+
   private:
     std::vector<std::string> questionTexts;
     std::vector<std::string> answerTexts;
     int decade;
-}
+};

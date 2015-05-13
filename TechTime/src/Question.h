@@ -10,6 +10,7 @@ public:
     void setText(std::string newtext);
     void setDecade(int dec);
     void resetCorners();
+    void reset();
     void update();
     void draw();
 private:

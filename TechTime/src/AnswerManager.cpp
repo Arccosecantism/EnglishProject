@@ -30,6 +30,59 @@ void AnswerManager::setAnswerText(std::string newtext, int i)
 {
     answerVector[i].setText(newtext);
 }
+
+void AnswerManager::setCorrect(bool b, int i)
+{
+    answerVector[i].setCorrect(b);
+}
+
+int AnswerManager::getAnswered()
+{
+    int answered = 0;
+    bool correct = false;
+    int temp;
+    for (int i = 0; i < answerVector.size(); i++)
+    {
+        temp = answerVector[i].getAnswered();
+        if (temp != 0)
+        {
+            if (temp == 2)
+            {
+                correct = true;
+            }
+            answered++;
+        }
+        if (answered == 2 or correct == true)
+        {
+            break;
+        }
+    }
+    if (correct == true)
+    {
+        return 2;
+    }
+    else if (answered > 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int AnswerManager::getAnswerNum()
+{
+    return answerNum;
+}
+
+void AnswerManager::resetAnswers()
+{
+    for (int i = 0; i < answerVector.size(); i++)
+    {
+        answerVector[i].reset();
+    }
+}
 void AnswerManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
 {
     for (int i = 0; i < answerVector.size(); i++)

@@ -44,6 +44,11 @@ void Question::setDecade(int dec)
     decade = dec;
 }
 
+void Question::reset()
+{
+    answered = 0;
+}
+
 void Question::update()
 {
 
@@ -52,7 +57,10 @@ void Question::update()
 void Question::draw()
 {
     backgro->draw(TLpos);
-    font->drawString(text, position.x - font->stringWidth(text)/2, position.y + font->stringHeight(text)/2);
+    ofSetColor(ofColor::black);
+    font->drawString(text, position.x - font->stringWidth(text)/2, position.y - backgro->getHeight() * 3 / 8);
+    ofSetColor(ofColor::white);
+//    std::cout << answered << std::endl;
     if (answered == 1)
     {
         wrongAns->draw(TLpos);

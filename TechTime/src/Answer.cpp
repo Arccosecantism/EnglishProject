@@ -14,6 +14,7 @@ Answer::Answer(ofVec2f pos, std::string tex, ofTrueTypeFont& f, ofTexture& bg, b
     colors.push_back(ofColor::green);
     correct = cor;
     colorPick = 0;
+    selected = false;
 }
 
 
@@ -28,9 +29,33 @@ void Answer::setText(std::string tex)
     text = tex;
 }
 
+
+
 void Answer::setCorrect(bool b)
 {
     correct = b;
+}
+
+int Answer::getAnswered()
+{
+    if (selected == true)
+    {
+        //std::cout << "here" << std::endl;
+        if (correct == true)
+        {
+
+            return 2;
+        }
+        else
+        {
+           // std::cout << "incorrect" << std::endl;
+            return 1;
+        }
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 int Answer::getClickedDataInt(ofVec2f& mousePos, bool& clicked, bool& pressed)
@@ -45,6 +70,8 @@ int Answer::getClickedDataInt(ofVec2f& mousePos, bool& clicked, bool& pressed)
     {
         if (clicked == true)
         {
+
+            selected = true;
             return 3;
         }
         else if (pressed == true)
@@ -63,6 +90,12 @@ void Answer::resetCorners()
     TLpos = ofVec2f(position.x - backgro->getWidth()/2, position.y - backgro->getHeight()/2);
     BRpos = ofVec2f(position.x + backgro->getWidth()/2, position.y + backgro->getHeight()/2);
 
+}
+
+void Answer::reset()
+{
+    selected = false;
+    correct = false;
 }
 
 void Answer::update(ofVec2f& mousepos, bool& clicked, bool& pressed)

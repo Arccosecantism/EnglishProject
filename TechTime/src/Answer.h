@@ -11,7 +11,9 @@ public:
     void resetCorners();
     void setText(std::string tex);
     void setCorrect(bool b);
+    int getAnswered();
 
+    void reset();
     void update(ofVec2f& mousepos, bool& clicked, bool& pressed);
     void draw();
 
@@ -20,7 +22,7 @@ private:
     vector<ofColor> colors;
     int colorPick;
     bool correct;
-    //int fsize;
+    bool selected;
     ofVec2f position;
     ofTrueTypeFont* font;
     ofTexture* backgro;

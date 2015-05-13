@@ -7,7 +7,11 @@ class QuestionManager
 public:
     QuestionManager();
     void setQuestionText(std::string newtext, int i);
+    void setQuestionDecade(int dec, int i);
     void setQuestionAnswered(int ans, int i);
+    void setAnswered(int i);
+    void resetQuestions();
+    int getQuestionNum();
     void update();
     void draw();
 
@@ -19,4 +23,5 @@ private:
 
     vector<Question> questionVector;
     int questionNum;
+    int answered;
 };
