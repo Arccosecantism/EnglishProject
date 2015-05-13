@@ -22,4 +22,5 @@ private:
     int delayCounter;
     int setCounter;
     int answered;
+    int threeTimePause;
 };

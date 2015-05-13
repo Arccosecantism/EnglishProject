@@ -74,6 +74,10 @@ int QuestionManager::getQuestionNum()
     return questionNum;
 }
 
+int QuestionManager::getAnswered()
+{
+    return answered;
+}
 
 void QuestionManager::update()
 {

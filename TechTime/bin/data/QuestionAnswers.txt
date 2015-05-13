@@ -42,4 +42,42 @@ AA
 -&-
 9
 -.-
+-n-
+QQ1600
+What is Nathan's alleged
+favorite color?
+(Hint: the answer
+is green.)
+-.-
+AA
+Blue
+-&-
+Red
+-&-
+Yellow
+-&-
+Green
+-&-
+**Shrek
+-.-
+-n-
+QQ1600
+TestQuestion4
+Answer is 3
+-.-
+AA
+**3
+-&-
+Blue
+-&-
+Marbury vs.
+Madison
+-&-
+NotCorrect
+-&-
+Kyroo is dumb
+-&-
+Running out
+of ideas
+-.-
 -end

@@ -96,6 +96,7 @@ void Answer::reset()
 {
     selected = false;
     correct = false;
+    colorPick = 0;
 }
 
 void Answer::update(ofVec2f& mousepos, bool& clicked, bool& pressed)

@@ -12,6 +12,7 @@ public:
     void setAnswered(int i);
     void resetQuestions();
     int getQuestionNum();
+    int getAnswered();
     void update();
     void draw();
 

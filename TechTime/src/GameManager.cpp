@@ -17,6 +17,7 @@ GameManager::GameManager()
     setAllText(setCounter);
     delayCounter = -1;
     answered = 0;
+    threeTimePause = 0;
 }
 
 void GameManager::fillQATexts()
@@ -139,12 +140,11 @@ void GameManager::setAllText(int trivset)
 
         questionMan.setQuestionText(QASetTexts[trivset].getQuestionVector()[i], i);
         questionMan.setQuestionDecade(QASetTexts[trivset].getDecade(), i);
-        std::cout << "here 1.4" << std::endl;
+
     }
 
     int ansListSize = QASetTexts[trivset].getAnswerVector().size();
     std::string corCheck = "";
-    std::cout << "here 1.5" << std::endl;
     for (int i = 0; i < answerMan.getAnswerNum(); i++)
     {
         if (i < ansListSize)
@@ -168,7 +168,6 @@ void GameManager::setAllText(int trivset)
             answerMan.setAnswerText("",i);
         }
     }
-    std::cout << "here 1.6" << std::endl;
 }
 
 void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
@@ -176,9 +175,21 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
     if (delayCounter < 0)
     {
         answered = answerMan.getAnswered();
+        std::cout << std::endl << answered << "\t" << threeTimePause << std::endl << std::endl;
         answerMan.update(mousePos, clicked, pressed);
         questionMan.update();
         questionMan.setAnswered(answered);
+        std::cout << std::endl << questionMan.getAnswered() << std::endl << std::endl;
+        if (threeTimePause > 2)
+        {
+            delayCounter = 100;
+            ofSetBackgroundAuto(false);
+        }
+        if (answered != 0)
+        {
+            threeTimePause ++;
+
+        }
 
     }
     else
@@ -194,27 +205,20 @@ void GameManager::draw()
         GameBG.draw(ofVec2f(0,0));
         answerMan.draw();
         questionMan.draw();
-        if (answered != 0)
-        {
-            delayCounter = 10;
-            ofSetBackgroundAuto(false);
-        }
+        std::cout << "here" << questionMan.getAnswered() << std::endl;
+
     }
     else
     {
-        if (delayCounter == 1)
+        if (delayCounter == 1 or delayCounter == 0)
         {
-            std::cout << "here1" << std::endl;
             ofSetBackgroundAuto(true);
-            std::cout << "here2" << std::endl;
             setCounter ++;
-            std::cout << setCounter << "\t" << QASetTexts.size() << std::endl;
             answerMan.resetAnswers();
-            std::cout << "here4" << std::endl;
             questionMan.resetQuestions();
-            std::cout << "here5\t" << setCounter << std::endl;
             setAllText(setCounter);
-            std::cout << "here6" << std::endl;
+            delayCounter = -5;
+            threeTimePause = 0;
 
 
         }
