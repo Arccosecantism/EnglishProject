@@ -11,6 +11,7 @@ public:
 //    void setFontByString(std::string bgnam);
     void setAnswerText(std::string newtext, int i);
     void setCorrect(bool b, int i);
+    ofTrueTypeFont* getFontPointer();
     int getAnswered();
     int getAnswerNum();
 

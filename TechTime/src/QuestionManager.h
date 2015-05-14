@@ -13,6 +13,7 @@ public:
     void resetQuestions();
     int getQuestionNum();
     int getAnswered();
+    ofTrueTypeFont* getFontPointer();
     void update();
     void draw();
 

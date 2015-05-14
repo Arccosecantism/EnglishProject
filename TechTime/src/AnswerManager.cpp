@@ -36,6 +36,11 @@ void AnswerManager::setCorrect(bool b, int i)
     answerVector[i].setCorrect(b);
 }
 
+ofTrueTypeFont* AnswerManager::getFontPointer()
+{
+    ofTrueTypeFont* rfont = &defaultFont;
+    return rfont;
+}
 int AnswerManager::getAnswered()
 {
     int answered = 0;

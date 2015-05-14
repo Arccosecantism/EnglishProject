@@ -27,9 +27,9 @@ void GameManager::fillQATexts()
     std::string line;
     TriviaSet filler;
     int decad;
-    bool firstline = true;
     int QA = 0;
     int counter = -1;
+    bool firstline = true;
     std::ifstream QAtexts("../bin/data/QuestionAnswers.txt");
 
     if (QAtexts.is_open())
@@ -48,24 +48,27 @@ void GameManager::fillQATexts()
                 {
 
                     QA = 0;
-                    firstline = true;
-                    QASetTexts[counter].addQuestionText(questiontex);
+                    QASetTexts[counter].addQuestionText(narrowString(questiontex, 350, false));
                     questiontex = "";
+                    firstline = true;
                 }
                 else if (line == "-&-")
                 {
-                    firstline = true;
                     QASetTexts[counter].addQuestionText(questiontex);
                     questiontex = "";
+                    firstline = true;
                 }
                 else
                 {
-                    if (firstline == false)
+                    if (firstline == true)
                     {
-                       questiontex += "\n";
+                        firstline = false;
+                    }
+                    else
+                    {
+                        questiontex += (" ");
                     }
                     questiontex += (line);
-                    firstline = false;
                 }
             }
 
@@ -74,24 +77,27 @@ void GameManager::fillQATexts()
                 if (line == "-.-")
                 {
                     QA = 0;
-                    firstline = true;
-                    QASetTexts[counter].addAnswerText(answertex);
+                    QASetTexts[counter].addAnswerText(narrowString(answertex, 150, true));
                     answertex = "";
+                    firstline = true;
                 }
                 else if (line == "-&-")
                 {
-                    firstline = true;
-                    QASetTexts[counter].addAnswerText(answertex);
+                    QASetTexts[counter].addAnswerText(narrowString(answertex, 150, true));
                     answertex = "";
+                    firstline = true;
                 }
                 else
                 {
-                    if (firstline == false)
+                    if (firstline == true)
                     {
-                       answertex += "\n";
+                        firstline = false;
+                    }
+                    else
+                    {
+                        answertex += (" ");
                     }
                     answertex += (line);
-                    firstline = false;
                 }
             }
 
@@ -131,6 +137,53 @@ void GameManager::fillQATexts()
 
 
 }
+
+std::string GameManager::narrowString(std::string input, int width, bool QA)
+{
+    int index;
+    int length;
+    std::string returnThis = "";
+    std::string line = "";
+    std::string woord = "";
+    for (int i = 0; i < input.size(); i++)
+    {
+        woord += input[i];
+        if (input[i] == ' ')
+        {
+            index = i;
+            line+=woord;
+            woord = "";
+        }
+
+
+        if (QA == false)
+        {
+            length = questionMan.getFontPointer()->stringWidth(line + woord);
+        }
+        else
+        {
+            length = answerMan.getFontPointer()->stringWidth(line + woord);
+        }
+        if (length > width)
+        {
+            woord = "\n";
+            line+=woord;
+            returnThis+=line;
+            line = "";
+            woord = "";
+            i = index;
+        }
+        if (i == input.size() - 1)
+        {
+            line+=woord;
+            returnThis+=line;
+            line = "";
+            woord = "";
+        }
+    }
+    return returnThis;
+}
+
 
 void GameManager::setAllText(int trivset)
 {
@@ -175,11 +228,11 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
     if (delayCounter < 0)
     {
         answered = answerMan.getAnswered();
-        std::cout << std::endl << answered << "\t" << threeTimePause << std::endl << std::endl;
+       // std::cout << std::endl << answered << "\t" << threeTimePause << std::endl << std::endl;
         answerMan.update(mousePos, clicked, pressed);
         questionMan.update();
         questionMan.setAnswered(answered);
-        std::cout << std::endl << questionMan.getAnswered() << std::endl << std::endl;
+      //  std::cout << std::endl << questionMan.getAnswered() << std::endl << std::endl;
         if (threeTimePause > 2)
         {
             delayCounter = 100;
@@ -205,7 +258,7 @@ void GameManager::draw()
         GameBG.draw(ofVec2f(0,0));
         answerMan.draw();
         questionMan.draw();
-        std::cout << "here" << questionMan.getAnswered() << std::endl;
+       // std::cout << "here" << questionMan.getAnswered() << std::endl;
 
     }
     else
@@ -223,7 +276,7 @@ void GameManager::draw()
 
         }
         delayCounter --;
-        std::cout << delayCounter << std::endl;
+       // std::cout << delayCounter << std::endl;
         //THE PROBLEM IS THE DELAY COUNTER IS LOOPING
     }
 

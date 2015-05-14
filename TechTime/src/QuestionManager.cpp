@@ -79,6 +79,11 @@ int QuestionManager::getAnswered()
     return answered;
 }
 
+ofTrueTypeFont* QuestionManager::getFontPointer()
+{
+    ofTrueTypeFont* rfont = &defaultFont;
+    return rfont;
+}
 void QuestionManager::update()
 {
     for (int i = 0; i < questionVector.size(); i++)

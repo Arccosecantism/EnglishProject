@@ -1,7 +1,6 @@
 -n-
 QQ1600
-What is the Square Root of 9?
-Please answer honestly.
+What is the Square Root of 9? Please answer honestly.
 -.-
 AA
 1
@@ -22,8 +21,7 @@ AA
 -.-
 -n-
 QQ1600
-What is 3+6/2?
-Tell the truth!
+What is 3+6/2? Tell the truth!
 -.-
 AA
 2
@@ -44,10 +42,7 @@ AA
 -.-
 -n-
 QQ1600
-What is Nathan's alleged
-favorite color?
-(Hint: the answer
-is green.)
+What is Nathan's alleged favorite color? (Hint: the answer is green.)
 -.-
 AA
 Blue
@@ -59,25 +54,5 @@ Yellow
 Green
 -&-
 **Shrek
--.-
--n-
-QQ1600
-TestQuestion4
-Answer is 3
--.-
-AA
-**3
--&-
-Blue
--&-
-Marbury vs.
-Madison
--&-
-NotCorrect
--&-
-Kyroo is dumb
--&-
-Running out
-of ideas
 -.-
 -end

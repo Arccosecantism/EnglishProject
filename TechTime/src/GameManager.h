@@ -11,6 +11,7 @@ public:
     void update(ofVec2f& mousePos, bool& clicked, bool& pressed);
     void draw();
     void fillQATexts();
+    std::string narrowString(std::string input, int width, bool QA);
     void setAllText(int trivset);
 
 

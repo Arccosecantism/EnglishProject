@@ -11,6 +11,7 @@ public:
     void resetCorners();
     void setText(std::string tex);
     void setCorrect(bool b);
+    ofVec2f getTextDrawSpots();
     int getAnswered();
 
     void reset();

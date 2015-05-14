@@ -36,6 +36,14 @@ void Answer::setCorrect(bool b)
     correct = b;
 }
 
+ofVec2f Answer::getTextDrawSpots()
+{
+    double x = position.x - font->stringWidth(text)/2;
+    double y = position.y - font->stringHeight(text)/2 + font->stringHeight("W");
+    ofVec2f returnme = ofVec2f(x,y);
+    return returnme;
+}
+
 int Answer::getAnswered()
 {
     if (selected == true)
@@ -114,9 +122,9 @@ void Answer::update(ofVec2f& mousepos, bool& clicked, bool& pressed)
 
 void Answer::draw()
 {
-
+    ofVec2f temp = getTextDrawSpots();
     backgro->draw(TLpos);
     ofSetColor(colors[colorPick]);
-    font->drawString(text, position.x - font->stringWidth(text)/2, position.y + font->stringHeight(text)/2);
+    font->drawString(text, temp.x, temp.y);
     ofSetColor(ofColor::white);
 }
