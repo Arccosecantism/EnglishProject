@@ -30,9 +30,9 @@ QuestionManager::QuestionManager()
         std::cout << "failed to load image Xmark" << std::endl;
     }
 
-    Question temp(ofVec2f(450,250), "TEST", defaultFont, questionBackground,
+    Question temp(ofVec2f(ofGetWindowWidth()/2, .25 * ofGetWindowHeight()), "TEST", defaultFont, questionBackground,
                   CMark, XMark);
-    for (int i = 0; i < questionNum; i++)
+    for (int i = 0; i < questionNum; i++)https://github.com/NathanJewell/HistoryGame.git
     {
         questionVector.push_back(temp);
     }

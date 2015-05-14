@@ -19,6 +19,7 @@ private:
     AnswerManager answerMan;
     QuestionManager questionMan;
     ofTexture GameBG;
+    ofTexture GameFrame;
     std::vector<TriviaSet> QASetTexts;
     int delayCounter;
     int setCounter;

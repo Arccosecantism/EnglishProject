@@ -11,6 +11,15 @@ GameManager::GameManager()
     {
         std::cout << "failed to load image GameBG" << std::endl;
     }
+    if(ofLoadImage(GameFrame, "GameFrame.png"))
+    {
+
+    }
+    else
+    {
+        std::cout << "failed to load image GameFR" << std::endl;
+    }
+
     fillQATexts();
 
     setCounter = 0;
@@ -255,7 +264,8 @@ void GameManager::draw()
 {
     if (delayCounter < 0)
     {
-        GameBG.draw(ofVec2f(0,0));
+        GameBG.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
+        GameFrame.draw(ofVec2f(0,0),  ofGetWindowWidth(), ofGetWindowHeight());
         answerMan.draw();
         questionMan.draw();
        // std::cout << "here" << questionMan.getAnswered() << std::endl;
