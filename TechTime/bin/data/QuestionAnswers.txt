@@ -1,44 +1,86 @@
 -n-
-QQ1600
-What is the Square Root of 9? Please answer honestly.
+QQ1490
+The Treaty of Tordesillas was an agreement pertaining to land in the Americas. It was an agreement between which two European countries?
 -.-
 AA
-1
+Portugal and Britain
 -&-
-2
+Britain and the United States
 -&-
-**3
+Britain and Spain
 -&-
-4
+France and Spain
 -&-
-5
+**Spain and Portugal
 -&-
-6
+Britain and Mexico
 -&-
-7
+Mexico and Spain
 -&-
-8
+France and Britain
 -.-
 -n-
-QQ1610
-What is 3+6/2? Tell the truth!
+QQ1490
+In the 15th, 16th and 17th centuries, the Spanish sent many soldiers to Central America. What were they called?
 -.-
 AA
-2
+Guerreros
 -&-
-3
+**Conquistadores
 -&-
-4
+Soldados
 -&-
-5
+Combatientes
 -&-
-**6
+Exploradores
 -&-
-7
+Guerrilleros
 -&-
-8
+Destructores
 -&-
-9
+Caballería
+-.-
+-n-
+QQ1490
+In Mexico, the Spanish constructed a system of controlling natives that involved feudalism and slavery. What was it called?
+-.-
+AA
+**The encomienda system
+-&-
+The esclavitud system
+-&-
+The trabajo system
+-&-
+The amabilidad system
+-&-
+The comercio system
+-&-
+The agricultura system
+-&-
+The feudalismo system
+-&-
+The nativo system
+-.-
+-n-
+QQ1490
+This Italian-born explorer went to Canada for King Henry VII of England and discovered Newfoundland. What is his name?
+-.-
+AA
+**John Cabot
+-&-
+Christopher Columbus
+-&-
+Juan Ponce de Leon
+-&-
+Jacques Cartier
+-&-
+Marco Polo
+-&-
+Giovanni da Verrazzano
+-&-
+Pietro Savorgnan di Brazzà
+-&-
+Vasco da Gama
 -.-
 -n-
 QQ1620

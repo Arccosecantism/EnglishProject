@@ -97,13 +97,13 @@ void GameManager::fillQATexts()
                 if (line == "-.-")
                 {
                     QA = 0;
-                    QASetTexts[counter].addAnswerText(narrowString(answertex, 150, true));
+                    QASetTexts[counter].addAnswerText(narrowString(answertex, 180, true));
                     answertex = "";
                     firstline = true;
                 }
                 else if (line == "-&-")
                 {
-                    QASetTexts[counter].addAnswerText(narrowString(answertex, 150, true));
+                    QASetTexts[counter].addAnswerText(narrowString(answertex, 180, true));
                     answertex = "";
                     firstline = true;
                 }
@@ -217,6 +217,7 @@ int GameManager::intPow(int i, int j)
 
 void GameManager::setAllText(int trivset)
 {
+    ofSeedRandom();
     std::vector<std::string> scrambled;
     std::vector<int> RandomNonRepeat;
     std::vector<int> listofNums;
@@ -230,6 +231,7 @@ void GameManager::setAllText(int trivset)
     {
         ran = ofRandom(0, listofNums.size());
         RandomNonRepeat.push_back(listofNums[ran]);
+        std::cout << RandomNonRepeat[i] << "\t" << ran << std::endl;
         listofNums.erase(listofNums.begin()+ran);
     }
     for (int i = 0; i < Asize; i++)
