@@ -20,7 +20,7 @@ AA
 8
 -.-
 -n-
-QQ1600
+QQ1610
 What is 3+6/2? Tell the truth!
 -.-
 AA
@@ -41,7 +41,7 @@ AA
 9
 -.-
 -n-
-QQ1600
+QQ1620
 What is Nathan's alleged favorite color? (Hint: the answer is green.)
 -.-
 AA

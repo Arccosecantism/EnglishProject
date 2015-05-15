@@ -3,7 +3,8 @@
 AnswerManager::AnswerManager()
 {
     answerNum = 8;
-    int bw = 20;
+    int wbw = 80;
+    int hbw = 35;
 
     if(ofLoadImage(answerBackground, "AnswerBackground.png"))
     {
@@ -13,14 +14,17 @@ AnswerManager::AnswerManager()
     {
         std::cout << "failed to load image :: " << std::endl;
     }
-
-    defaultFont.loadFont("Obelisk-MMXV.ttf", 14);
+    std::cout << ofGetScreenWidth();
+    defaultFont.loadFont("AlexandriaFLF.ttf", 18);
     Answer temp(ofVec2f(400,400), "TEST", defaultFont, answerBackground, false);
+    int cardsPerLine = ofGetWindowWidth() / (wbw + answerBackground.getWidth());
+    wbw = (ofGetWindowWidth() - (cardsPerLine * answerBackground.getWidth())) / (1 + cardsPerLine);
+    //std::cout << bw << std::endl;
     for (int i = 0; i < answerNum; i++)
     {
         answerVector.push_back(temp);
-        answerVector[i].setPosition(ofVec2f(((i % 4) + 1) * bw + (i % 4) * answerBackground.getWidth() + answerBackground.getWidth()/2,
-                                    ofGetWindowHeight() - ((2 - (i / 4)) * bw + (1 - (i / 4)) * answerBackground.getHeight() + answerBackground.getHeight()/2))
+        answerVector[i].setPosition(ofVec2f(((i % cardsPerLine) + 1) * wbw + (i % cardsPerLine) * answerBackground.getWidth() + answerBackground.getWidth()/2,
+                                    ofGetWindowHeight() * .71 + (i / cardsPerLine) * (hbw + answerBackground.getHeight()))
                                     );
     }
 }

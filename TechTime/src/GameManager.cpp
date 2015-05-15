@@ -19,6 +19,16 @@ GameManager::GameManager()
     {
         std::cout << "failed to load image GameFR" << std::endl;
     }
+    if(ofLoadImage(WinScreen, "WinScreen.png"))
+    {
+
+    }
+    else
+    {
+        std::cout << "failed to load image WinScreen" << std::endl;
+    }
+
+    defaultFont.loadFont("AlexandriaFLF.ttf", 40);
 
     fillQATexts();
 
@@ -27,6 +37,7 @@ GameManager::GameManager()
     delayCounter = -1;
     answered = 0;
     threeTimePause = 0;
+    won = false;
 }
 
 void GameManager::fillQATexts()
@@ -114,7 +125,7 @@ void GameManager::fillQATexts()
             {
                 QA = 1;
                 decad = 1000*(line[2]-'0') + 100 * (line[3]-'0') + 10 * (line[4]-'0');
-                QASetTexts[0].setDecade(decad);
+                QASetTexts[counter].setDecade(decad);
             }
 
             else if (line[0] == 'A' and line[1] == 'A' and QA == 0)
@@ -128,23 +139,6 @@ void GameManager::fillQATexts()
 
         }
     }
-//    for (int i = 0; i < QASetTexts.size(); i++)
-//    {
-//        for (int j = 0; j < QASetTexts[i].getQuestionVector().size(); j++)
-//        {
-//            std::cout << QASetTexts[i].getQuestionVector()[j] << std::endl;
-//        }
-//        std::cout << std::endl;
-//        for (int j = 0; j < QASetTexts[i].getAnswerVector().size(); j++)
-//        {
-//            std::cout << QASetTexts[i].getAnswerVector()[j] << std::endl;
-//        }
-//        std::cout << std::endl << std::endl;
-//    }
-
-
-
-
 }
 
 std::string GameManager::narrowString(std::string input, int width, bool QA)
@@ -193,9 +187,56 @@ std::string GameManager::narrowString(std::string input, int width, bool QA)
     return returnThis;
 }
 
+std::string GameManager::intToString(int i)
+{
+    stringstream convert;
+    convert << i;
+    std::string returnme = convert.str();
+    return returnme;
+}
+
+int GameManager::stringToInt(std::string str)
+{
+    int sum = 0;
+    for (int i = 0; i < str.length(); i++)
+    {
+        sum += str[i]*intPow(10, (str.length() - i - 1));
+    }
+    return sum;
+}
+
+int GameManager::intPow(int i, int j)
+{
+    int product = 1;
+    for (int k = 0; k < j; k++)
+    {
+        product *= i;
+    }
+    return product;
+}
 
 void GameManager::setAllText(int trivset)
 {
+    std::vector<std::string> scrambled;
+    std::vector<int> RandomNonRepeat;
+    std::vector<int> listofNums;
+    int ran;
+    int Asize = QASetTexts[trivset].getAnswerVector().size();
+    for (int i = 0; i < Asize; i++)
+    {
+        listofNums.push_back(i);
+    }
+    for (int i = 0; i < Asize; i++)
+    {
+        ran = ofRandom(0, listofNums.size());
+        RandomNonRepeat.push_back(listofNums[ran]);
+        listofNums.erase(listofNums.begin()+ran);
+    }
+    for (int i = 0; i < Asize; i++)
+    {
+        scrambled.push_back(QASetTexts[trivset].getAnswerVector()[RandomNonRepeat[i]]);
+    }
+
     for (int i = 0; i < questionMan.getQuestionNum(); i++)
     {
 
@@ -205,13 +246,13 @@ void GameManager::setAllText(int trivset)
 
     }
 
-    int ansListSize = QASetTexts[trivset].getAnswerVector().size();
+    int ansListSize = scrambled.size();
     std::string corCheck = "";
     for (int i = 0; i < answerMan.getAnswerNum(); i++)
     {
         if (i < ansListSize)
         {
-            corCheck = QASetTexts[trivset].getAnswerVector()[i];
+            corCheck = scrambled[i];
 
             if (corCheck[0] == '*' and corCheck [1] == '*')
             {
@@ -264,10 +305,20 @@ void GameManager::draw()
 {
     if (delayCounter < 0)
     {
-        GameBG.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
-        GameFrame.draw(ofVec2f(0,0),  ofGetWindowWidth(), ofGetWindowHeight());
-        answerMan.draw();
-        questionMan.draw();
+        if (won == false)
+        {
+            GameBG.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
+            GameFrame.draw(ofVec2f(0,0),  ofGetWindowWidth(), ofGetWindowHeight());
+            answerMan.draw();
+            questionMan.draw();
+            defaultFont.drawString(intToString(QASetTexts[setCounter].getDecade()), ofGetWindowWidth()*.025, ofGetWindowHeight()*.08);
+        }
+        else
+        {
+            WinScreen.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
+        }
+
+
        // std::cout << "here" << questionMan.getAnswered() << std::endl;
 
     }
@@ -276,15 +327,28 @@ void GameManager::draw()
         if (delayCounter == 1 or delayCounter == 0)
         {
             ofSetBackgroundAuto(true);
-            setCounter ++;
-            answerMan.resetAnswers();
-            questionMan.resetQuestions();
-            setAllText(setCounter);
             delayCounter = -5;
             threeTimePause = 0;
+            if (won == false)
+            {
+                if (setCounter == QASetTexts.size() - 1)
+                {
+                    won = true;
+                }
+                else
+                {
+                   setCounter ++;
+                }
+                answerMan.resetAnswers();
+                questionMan.resetQuestions();
+                setAllText(setCounter);
+
+            }
+
 
 
         }
+
         delayCounter --;
        // std::cout << delayCounter << std::endl;
         //THE PROBLEM IS THE DELAY COUNTER IS LOOPING
