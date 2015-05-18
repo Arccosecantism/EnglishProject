@@ -9,7 +9,8 @@ Question::Question(ofVec2f pos, std::string qtex, ofTrueTypeFont& ffont, ofTextu
     backgro = &fbackgro;
     rightAns = &frightAns;
     wrongAns = &fwrongAns;
-    decade = 600;
+    decade = 0;
+    windowMultiplier = ofVec2f(ofGetWindowWidth() / position.x, ofGetWindowHeight() / position.y);
 
     resetCorners();
 }
@@ -30,8 +31,21 @@ void Question::setPosition(ofVec2f p)
 
 void Question::resetCorners()
 {
-    TLpos = ofVec2f(position.x - backgro->getWidth()/2, position.y - backgro->getHeight()/2);
-    BRpos = ofVec2f(position.x + backgro->getWidth()/2, position.y + backgro->getHeight()/2);
+
+    TLpos = ofVec2f(position.x - (dimensions.x/2) * ofGetWindowWidth() / 1600.0,
+                    position.y - (dimensions.y/2) * ofGetWindowHeight() / 1200.0);
+    BRpos = ofVec2f(position.x + (dimensions.x/2) * ofGetWindowWidth() / 1600.0,
+                    position.y + (dimensions.y/2) * ofGetWindowHeight() / 1200.0);
+}
+
+void Question::setDimensions(ofVec2f dim)
+{
+    dimensions = dim;
+}
+
+ofVec2f Question::getDimensions()
+{
+    return dimensions;
 }
 
 ofVec2f Question::getTextDrawSpots()
@@ -59,24 +73,26 @@ void Question::reset()
 
 void Question::update()
 {
-
+    position = ofVec2f(ofGetWindowWidth() / windowMultiplier.x, ofGetWindowHeight() / windowMultiplier.y);
+    resetCorners();
 }
 
 void Question::draw()
 {
+    ofVec2f drawsize = ofVec2f(BRpos.x - TLpos.x, BRpos.y - TLpos.y);
     ofVec2f temp = getTextDrawSpots();
-    backgro->draw(TLpos);
+    backgro->draw(TLpos, drawsize.x, drawsize.y);
     ofSetColor(ofColor::black);
     font->drawString(text, temp.x, temp.y);
     ofSetColor(ofColor::white);
 //    std::cout << answered << std::endl;
     if (answered == 1)
     {
-        wrongAns->draw(TLpos);
+        wrongAns->draw(TLpos, drawsize.x, drawsize.y);
     }
     else if (answered == 2)
     {
-        rightAns->draw(TLpos);
+        rightAns->draw(TLpos, drawsize.x, drawsize.y);
     }
 
 }

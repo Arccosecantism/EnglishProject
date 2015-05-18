@@ -8,13 +8,14 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    gameMan.update(mousePos, clicked, pressed);
+    gameMan.update(mousePos, clicked, pressed, mouseclicked);
 
 
-    if(pressed != true)
+    if(pressed == false)
     {
         clicked = false;
     }
+    mouseclicked = 0;
     dragging = false;
 }
 
@@ -45,16 +46,18 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
     dragging = true;
-    mousePos.x = x;
-    mousePos.y = y;
+   // mousePos.x = x;
+  //  mousePos.y = y;
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
     dragging = false;
-    mousePos.x = x;
-    mousePos.y = y;
+   // mousePos.x = x;
+   // mousePos.y = y;
     pressed = true;
+
+    //std::cout << mouseclicked << std::endl;
 }
 
 //--------------------------------------------------------------
@@ -63,10 +66,13 @@ void ofApp::mouseReleased(int x, int y, int button){
     {
         pressed = false;
         clicked = true;
+
     }
     dragging = false;
-    mousePos.x = x;
-    mousePos.y = y;
+    mouseclicked = 1 + button;
+
+   // mousePos.x = x;
+   // mousePos.y = y;
 }
 
 //--------------------------------------------------------------

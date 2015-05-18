@@ -38,10 +38,16 @@ GameManager::GameManager()
     answered = 0;
     threeTimePause = 0;
     won = false;
+    score = 0;
+    posScore = 0;
+    setScoreAlready = false;
+    setScoreString();
 }
 
 void GameManager::fillQATexts()
 {
+    int aborder = 25;
+    int qborder = 25;
     std::string questiontex = "";
     std::string answertex = "";
     std::string line;
@@ -68,7 +74,7 @@ void GameManager::fillQATexts()
                 {
 
                     QA = 0;
-                    QASetTexts[counter].addQuestionText(narrowString(questiontex, 350, false));
+                    QASetTexts[counter].addQuestionText(narrowString(questiontex, questionMan.getDimensions(0).x - 2 * qborder, false));
                     questiontex = "";
                     firstline = true;
                 }
@@ -97,13 +103,13 @@ void GameManager::fillQATexts()
                 if (line == "-.-")
                 {
                     QA = 0;
-                    QASetTexts[counter].addAnswerText(narrowString(answertex, 180, true));
+                    QASetTexts[counter].addAnswerText(narrowString(answertex, answerMan.getDimensions(0).x - 2 * aborder, true));
                     answertex = "";
                     firstline = true;
                 }
                 else if (line == "-&-")
                 {
-                    QASetTexts[counter].addAnswerText(narrowString(answertex, 180, true));
+                    QASetTexts[counter].addAnswerText(narrowString(answertex, answerMan.getDimensions(0).x - 2 * aborder, true));
                     answertex = "";
                     firstline = true;
                 }
@@ -231,7 +237,7 @@ void GameManager::setAllText(int trivset)
     {
         ran = ofRandom(0, listofNums.size());
         RandomNonRepeat.push_back(listofNums[ran]);
-        std::cout << RandomNonRepeat[i] << "\t" << ran << std::endl;
+     //   std::cout << RandomNonRepeat[i] << "\t" << ran << std::endl;
         listofNums.erase(listofNums.begin()+ran);
     }
     for (int i = 0; i < Asize; i++)
@@ -275,16 +281,14 @@ void GameManager::setAllText(int trivset)
     }
 }
 
-void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
+void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& mouseButton)
 {
     if (delayCounter < 0)
     {
         answered = answerMan.getAnswered();
-       // std::cout << std::endl << answered << "\t" << threeTimePause << std::endl << std::endl;
-        answerMan.update(mousePos, clicked, pressed);
+        answerMan.update(mousePos, clicked, pressed, mouseButton);
         questionMan.update();
         questionMan.setAnswered(answered);
-      //  std::cout << std::endl << questionMan.getAnswered() << std::endl << std::endl;
         if (threeTimePause > 2)
         {
             delayCounter = 100;
@@ -293,7 +297,17 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
         if (answered != 0)
         {
             threeTimePause ++;
-
+            answerMan.setShowCorrect(true);
+            if (setScoreAlready == false)
+            {
+                setScoreAlready = true;
+                if (answered == 2)
+                {
+                    score ++;
+                }
+                posScore ++;
+                setScoreString();
+            }
         }
 
     }
@@ -301,6 +315,7 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
     {
         delayCounter --;
     }
+
 };
 
 void GameManager::draw()
@@ -313,21 +328,21 @@ void GameManager::draw()
             GameFrame.draw(ofVec2f(0,0),  ofGetWindowWidth(), ofGetWindowHeight());
             answerMan.draw();
             questionMan.draw();
-            defaultFont.drawString(intToString(QASetTexts[setCounter].getDecade()), ofGetWindowWidth()*.025, ofGetWindowHeight()*.08);
+            ofSetColor(ofColor::black);
+            defaultFont.drawString("Date: " + intToString(QASetTexts[setCounter].getDecade()), ofGetWindowWidth()*.025, ofGetWindowHeight()*.063);
+            defaultFont.drawString(scorestr, ofGetWindowWidth()*.8, ofGetWindowHeight()*.063);
+            ofSetColor(ofColor::white);
         }
         else
         {
             WinScreen.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
         }
-
-
-       // std::cout << "here" << questionMan.getAnswered() << std::endl;
-
     }
     else
     {
         if (delayCounter == 1 or delayCounter == 0)
         {
+            setScoreAlready = false;
             ofSetBackgroundAuto(true);
             delayCounter = -5;
             threeTimePause = 0;
@@ -346,14 +361,17 @@ void GameManager::draw()
                 setAllText(setCounter);
 
             }
-
-
-
         }
-
         delayCounter --;
-       // std::cout << delayCounter << std::endl;
-        //THE PROBLEM IS THE DELAY COUNTER IS LOOPING
     }
 
+}
+
+void GameManager::setScoreString()
+{
+    stringstream ca;
+    stringstream cb;
+    ca << score;
+    cb << posScore;
+    scorestr = "Score: " + ca.str() + "/" + cb.str();
 }

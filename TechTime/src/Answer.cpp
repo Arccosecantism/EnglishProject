@@ -1,26 +1,34 @@
 #include "Answer.h"
 
-Answer::Answer(ofVec2f pos, std::string tex, ofTrueTypeFont& f, ofTexture& bg, bool cor)
+Answer::Answer(ofVec2f pos, std::string tex, ofTrueTypeFont& f, ofTexture& bg, ofTexture& stbg, ofTexture& sts, bool cor)
 {
     position = pos;
     text = tex;
     font = &f;
     backgro = &bg;
+    strikeThroughBG = &stbg;
+    strikeThroughS = &sts;
+    windowMultiplier = ofVec2f(ofGetWindowWidth() / position.x, ofGetWindowHeight() / position.y);
+
     resetCorners();
     colors.push_back(ofColor::black);
     colors.push_back(ofColor(0,0,205));
     colors.push_back(ofColor(16,52,166));
     colors.push_back(ofColor::red);
-    colors.push_back(ofColor::green);
+    colors.push_back(ofColor(0, 165, 80));
     correct = cor;
     colorPick = 0;
     selected = false;
+    showCorrect = false;
+    strikeThrough = false;
+
 }
 
 
 void Answer::setPosition(ofVec2f p)
 {
     position = p;
+    windowMultiplier = ofVec2f(ofGetWindowWidth() / position.x, ofGetWindowHeight() / position.y);
     resetCorners();
 }
 
@@ -35,6 +43,11 @@ void Answer::setCorrect(bool b)
 {
     correct = b;
 }
+
+ void Answer::setShowCorrect(bool b)
+ {
+     showCorrect = b;
+ }
 
 ofVec2f Answer::getTextDrawSpots()
 {
@@ -66,65 +79,120 @@ int Answer::getAnswered()
     }
 }
 
-int Answer::getClickedDataInt(ofVec2f& mousePos, bool& clicked, bool& pressed)
+int Answer::getClickedDataInt(ofVec2f& mousePos, bool& clicked, bool& pressed, int& mouseButton)
 {
+    int returnme = 0;
     if (mousePos.x < TLpos.x || mousePos.x > BRpos.x ||
         mousePos.y < TLpos.y || mousePos.y > BRpos.y)
     {
-        return 0;
-        // it's outside
+        returnme = 0;
     }
     else
     {
-        if (clicked == true)
-        {
 
-            selected = true;
-            return 3;
-        }
-        else if (pressed == true)
+        if (mouseButton == 3 and clicked == true)
         {
-            return 2;
+            strikeThrough = !strikeThrough;
+            returnme = 0;
+        }
+        else if (mouseButton == 1 and strikeThrough == false)
+        {
+            if (clicked == true)
+            {
+                selected = true;
+                returnme = 3;
+            }
+            else if (pressed == true)
+            {
+                returnme = 2;
+            }
         }
         else
         {
-            return 1;
+            returnme = 1;
         }
     }
+    return returnme;
 }
 
 void Answer::resetCorners()
 {
-    TLpos = ofVec2f(position.x - backgro->getWidth()/2, position.y - backgro->getHeight()/2);
-    BRpos = ofVec2f(position.x + backgro->getWidth()/2, position.y + backgro->getHeight()/2);
 
+    TLpos = ofVec2f(position.x - (dimensions.x/2) * ofGetWindowWidth() / 1600.0,
+                    position.y - (dimensions.y/2) * ofGetWindowHeight() / 1200.0);
+    BRpos = ofVec2f(position.x + (dimensions.x/2) * ofGetWindowWidth() / 1600.0,
+                    position.y + (dimensions.y/2) * ofGetWindowHeight() / 1200.0);
+}
+
+void Answer::setDimensions(ofVec2f dim)
+{
+    dimensions = dim;
+}
+
+ofVec2f Answer::getDimensions()
+{
+    return dimensions;
+}
+
+bool Answer::getCorrect()
+{
+    return correct;
 }
 
 void Answer::reset()
 {
     selected = false;
     correct = false;
+    showCorrect = false;
+    strikeThrough = false;
     colorPick = 0;
 }
 
-void Answer::update(ofVec2f& mousepos, bool& clicked, bool& pressed)
+void Answer::update(ofVec2f& mousepos, bool& clicked, bool& pressed, int& mouseButton)
 {
-    if (colorPick != 3 and colorPick != 4)
+    position = ofVec2f(ofGetWindowWidth() / windowMultiplier.x, ofGetWindowHeight() / windowMultiplier.y);
+    resetCorners();
+    if (showCorrect == true)
     {
-        int state = getClickedDataInt(mousepos, clicked, pressed);
-        colorPick = state;
-        if (colorPick == 3 and correct == true)
+        colorPick = 4;
+        strikeThrough = false;
+    }
+    else if (colorPick != 3 and colorPick != 4)
+    {
+        int state = getClickedDataInt(mousepos, clicked, pressed, mouseButton);
+        if (strikeThrough == true)
         {
-            colorPick = 4;
+            colorPick = 0;
+        }
+        else
+        {
+            colorPick = state;
+            if (colorPick == 3 and correct == true)
+            {
+                colorPick = 4;
+            }
         }
     }
 }
 
 void Answer::draw()
 {
+    ofVec2f drawsize = ofVec2f(BRpos.x - TLpos.x, BRpos.y - TLpos.y);
     ofVec2f temp = getTextDrawSpots();
-    backgro->draw(TLpos);
-    ofSetColor(colors[colorPick]);
-    font->drawString(text, temp.x, temp.y);
-    ofSetColor(ofColor::white);
+    if (strikeThrough == true)
+    {
+        strikeThroughBG->draw(TLpos, drawsize.x, drawsize.y);
+        ofSetColor(colors[colorPick]);
+        font->drawString(text, temp.x, temp.y);
+        ofSetColor(ofColor::white);
+        strikeThroughS->draw(TLpos, drawsize.x, drawsize.y);
+    }
+    else
+    {
+        backgro->draw(TLpos, drawsize.x, drawsize.y);
+        ofSetColor(colors[colorPick]);
+        font->drawString(text, temp.x, temp.y);
+        ofSetColor(ofColor::white);
+    }
+
 }

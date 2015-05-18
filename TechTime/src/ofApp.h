@@ -25,4 +25,5 @@ class ofApp : public ofBaseApp{
         bool pressed;//true if mouse button has been pressed down
         bool clicked;//true if mouse button has been pushed down then released
         bool dragging;//true if mouse button is pressed and is being moved
+        int mouseclicked;
 };

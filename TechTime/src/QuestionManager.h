@@ -14,6 +14,7 @@ public:
     int getQuestionNum();
     int getAnswered();
     ofTrueTypeFont* getFontPointer();
+    ofVec2f getDimensions(int i);
     void update();
     void draw();
 

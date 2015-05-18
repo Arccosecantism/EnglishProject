@@ -3,7 +3,7 @@
 AnswerManager::AnswerManager()
 {
     answerNum = 8;
-    int wbw = 80;
+    int wbw = 50;
     int hbw = 35;
 
     if(ofLoadImage(answerBackground, "AnswerBackground.png"))
@@ -12,20 +12,49 @@ AnswerManager::AnswerManager()
     }
     else
     {
-        std::cout << "failed to load image :: " << std::endl;
+        std::cout << "failed to load image :: AnswerBG " << std::endl;
     }
-    std::cout << ofGetScreenWidth();
+
+    if(ofLoadImage(strikeThruBG, "StrikeThroughBackGround.png"))
+    {
+
+    }
+    else
+    {
+        std::cout << "failed to load image :: StrikeThruBG" << std::endl;
+    }
+
+    if(ofLoadImage(strikeThruS, "StrikeThrough.png"))
+    {
+
+    }
+    else
+    {
+        std::cout << "failed to load image :: StrikeThruStrike" << std::endl;
+    }
+
+
     defaultFont.loadFont("AlexandriaFLF.ttf", 18);
-    Answer temp(ofVec2f(400,400), "TEST", defaultFont, answerBackground, false);
-    int cardsPerLine = ofGetWindowWidth() / (wbw + answerBackground.getWidth());
-    wbw = (ofGetWindowWidth() - (cardsPerLine * answerBackground.getWidth())) / (1 + cardsPerLine);
-    //std::cout << bw << std::endl;
+
+    Answer temp(ofVec2f(400,400), "TEST", defaultFont, answerBackground, strikeThruBG, strikeThruS, false);
+    int cardsPerLine = 4;
+    int cardRows = answerNum / cardsPerLine;
+
+    double barlength = 15;
+
+    double borderx = ofGetWindowWidth() - 2 * barlength * ofGetWindowWidth() / 1600.0;
+    double bordery = 500 - 2 * barlength * ofGetWindowHeight() / 1200.0;
+
+    double xdim = (borderx - (cardsPerLine + 1) * wbw) / cardsPerLine;
+    double ydim = (bordery - (cardRows + 1) * hbw) / cardRows;
+
     for (int i = 0; i < answerNum; i++)
     {
         answerVector.push_back(temp);
-        answerVector[i].setPosition(ofVec2f(((i % cardsPerLine) + 1) * wbw + (i % cardsPerLine) * answerBackground.getWidth() + answerBackground.getWidth()/2,
-                                    ofGetWindowHeight() * .71 + (i / cardsPerLine) * (hbw + answerBackground.getHeight()))
+        answerVector[i].setPosition(ofVec2f(barlength + ((i % cardsPerLine) + 1) * wbw + (i % cardsPerLine) * xdim + xdim / 2,
+                                    barlength + 700 + (i / cardsPerLine + 1) * hbw + (i / cardsPerLine) * ydim + ydim / 2)
                                     );
+        answerVector[i].setDimensions(ofVec2f(xdim,ydim));
     }
 }
 //    void setBGTextureByString(std::string bgnam);
@@ -40,11 +69,31 @@ void AnswerManager::setCorrect(bool b, int i)
     answerVector[i].setCorrect(b);
 }
 
+void AnswerManager::setShowCorrect(bool b)
+{
+    if (getAnswered() == 1)
+    {
+        for (int i = 0; i < answerVector.size(); i++)
+        {
+            if (answerVector[i].getCorrect() == true)
+            {
+                answerVector[i].setShowCorrect(true);
+            }
+        }
+    }
+}
+
 ofTrueTypeFont* AnswerManager::getFontPointer()
 {
     ofTrueTypeFont* rfont = &defaultFont;
     return rfont;
 }
+
+ofVec2f AnswerManager::getDimensions(int i)
+{
+    return answerVector[i].getDimensions();
+}
+
 int AnswerManager::getAnswered()
 {
     int answered = 0;
@@ -92,11 +141,11 @@ void AnswerManager::resetAnswers()
         answerVector[i].reset();
     }
 }
-void AnswerManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed)
+void AnswerManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& mouseButton)
 {
     for (int i = 0; i < answerVector.size(); i++)
     {
-        answerVector[i].update(mousePos, clicked, pressed);
+        answerVector[i].update(mousePos, clicked, pressed, mouseButton);
     }
 }
 

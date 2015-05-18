@@ -8,7 +8,7 @@ class GameManager
 {
 public:
     GameManager();
-    void update(ofVec2f& mousePos, bool& clicked, bool& pressed);
+    void update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& mouseButton);
     void draw();
     void fillQATexts();
     std::string intToString(int i);
@@ -19,6 +19,8 @@ public:
 
 
 private:
+    void setScoreString();
+
     AnswerManager answerMan;
     QuestionManager questionMan;
     ofTexture GameBG;
@@ -30,5 +32,9 @@ private:
     int setCounter;
     int answered;
     int threeTimePause;
+    int score;
+    int posScore;
+    bool setScoreAlready;
+    std::string scorestr;
     bool won;
 };

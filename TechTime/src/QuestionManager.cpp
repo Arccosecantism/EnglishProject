@@ -35,6 +35,7 @@ QuestionManager::QuestionManager()
     for (int i = 0; i < questionNum; i++)
     {
         questionVector.push_back(temp);
+        questionVector[i].setDimensions(ofVec2f(500,500));
     }
 
     defaultFont.loadFont("AlexandriaFLF.ttf", 24);
@@ -84,6 +85,12 @@ ofTrueTypeFont* QuestionManager::getFontPointer()
     ofTrueTypeFont* rfont = &defaultFont;
     return rfont;
 }
+
+ofVec2f QuestionManager::getDimensions(int i)
+{
+    return questionVector[i].getDimensions();
+}
+
 void QuestionManager::update()
 {
     for (int i = 0; i < questionVector.size(); i++)

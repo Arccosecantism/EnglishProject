@@ -10,6 +10,8 @@ public:
     void setText(std::string newtext);
     void setDecade(int dec);
     void resetCorners();
+    void setDimensions(ofVec2f dim);
+    ofVec2f getDimensions();
     ofVec2f getTextDrawSpots();
     void reset();
     void update();
@@ -26,6 +28,8 @@ private:
 
     int answered;
     int decade;
+    ofVec2f windowMultiplier;
+    ofVec2f dimensions;
 
 
 };
