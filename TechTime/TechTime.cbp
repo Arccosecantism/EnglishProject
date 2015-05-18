@@ -122,10 +122,14 @@
 		<Unit filename="src/Answer.h" />
 		<Unit filename="src/AnswerManager.cpp" />
 		<Unit filename="src/AnswerManager.h" />
+		<Unit filename="src/GameManager.cpp" />
+		<Unit filename="src/GameManager.h" />
 		<Unit filename="src/Question.cpp" />
 		<Unit filename="src/Question.h" />
 		<Unit filename="src/QuestionManager.cpp" />
 		<Unit filename="src/QuestionManager.h" />
+		<Unit filename="src/TriviaSet.cpp" />
+		<Unit filename="src/TriviaSet.h" />
 		<Unit filename="src/main.cpp">
 			<Option virtualFolder="src" />
 		</Unit>

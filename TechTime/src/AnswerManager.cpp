@@ -43,16 +43,18 @@ AnswerManager::AnswerManager()
     double barlength = 15;
 
     double borderx = ofGetWindowWidth() - 2 * barlength * ofGetWindowWidth() / 1600.0;
-    double bordery = 500 - 2 * barlength * ofGetWindowHeight() / 1200.0;
+
+    double bordery = (500 - 2 * barlength) * ofGetWindowHeight() / 1200.0;
 
     double xdim = (borderx - (cardsPerLine + 1) * wbw) / cardsPerLine;
+    std::cout << borderx << "\t" << xdim << "\t"  << (borderx - (cardsPerLine + 1) * wbw) << std::endl;
     double ydim = (bordery - (cardRows + 1) * hbw) / cardRows;
 
     for (int i = 0; i < answerNum; i++)
     {
         answerVector.push_back(temp);
         answerVector[i].setPosition(ofVec2f(barlength + ((i % cardsPerLine) + 1) * wbw + (i % cardsPerLine) * xdim + xdim / 2,
-                                    barlength + 700 + (i / cardsPerLine + 1) * hbw + (i / cardsPerLine) * ydim + ydim / 2)
+                                    barlength + 700 * ofGetWindowHeight() / 1200.0 + (i / cardsPerLine + 1) * hbw + (i / cardsPerLine) * ydim + ydim / 2)
                                     );
         answerVector[i].setDimensions(ofVec2f(xdim,ydim));
     }

@@ -32,10 +32,10 @@ void Question::setPosition(ofVec2f p)
 void Question::resetCorners()
 {
 
-    TLpos = ofVec2f(position.x - (dimensions.x/2) * ofGetWindowWidth() / 1600.0,
-                    position.y - (dimensions.y/2) * ofGetWindowHeight() / 1200.0);
-    BRpos = ofVec2f(position.x + (dimensions.x/2) * ofGetWindowWidth() / 1600.0,
-                    position.y + (dimensions.y/2) * ofGetWindowHeight() / 1200.0);
+    TLpos = ofVec2f(position.x - (dimensions.x/2),
+                    position.y - (dimensions.y/2));
+    BRpos = ofVec2f(position.x + (dimensions.x/2),
+                    position.y + (dimensions.y/2));
 }
 
 void Question::setDimensions(ofVec2f dim)
