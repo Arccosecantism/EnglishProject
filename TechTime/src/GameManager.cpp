@@ -42,11 +42,12 @@ GameManager::GameManager()
     posScore = 0;
     setScoreAlready = false;
     setScoreString();
+    getBookFromCode();
 }
 
 void GameManager::fillQATexts()
 {
-    int aborder = 25;
+    int aborder = 30;
     int qborder = 25;
     std::string questiontex = "";
     std::string answertex = "";
@@ -130,7 +131,7 @@ void GameManager::fillQATexts()
             if (line[0] == 'Q' and line[1] == 'Q' and QA == 0)
             {
                 QA = 1;
-                decad = 1000*(line[2]-'0') + 100 * (line[3]-'0') + 10 * (line[4]-'0');
+                decad = line[2];
                 QASetTexts[counter].setDecade(decad);
             }
 
@@ -237,7 +238,7 @@ void GameManager::setAllText(int trivset)
     {
         ran = ofRandom(0, listofNums.size());
         RandomNonRepeat.push_back(listofNums[ran]);
-     //   std::cout << RandomNonRepeat[i] << "\t" << ran << std::endl;
+
         listofNums.erase(listofNums.begin()+ran);
     }
     for (int i = 0; i < Asize; i++)
@@ -291,7 +292,7 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
         questionMan.setAnswered(answered);
         if (threeTimePause > 2)
         {
-            delayCounter = 100;
+            delayCounter = 150;
             ofSetBackgroundAuto(false);
         }
         if (answered != 0)
@@ -313,6 +314,10 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
     }
     else
     {
+        if (clicked == true and delayCounter > 3)
+        {
+            delayCounter = 3;
+        }
         delayCounter --;
     }
 
@@ -329,7 +334,7 @@ void GameManager::draw()
             answerMan.draw();
             questionMan.draw();
             ofSetColor(ofColor::black);
-            defaultFont.drawString("Date: " + intToString(QASetTexts[setCounter].getDecade()), ofGetWindowWidth()*.025, ofGetWindowHeight()*.063);
+            defaultFont.drawString("Book: " + intToString(QASetTexts[setCounter].getDecade()), ofGetWindowWidth()*.025, ofGetWindowHeight()*.063);
             defaultFont.drawString(scorestr, ofGetWindowWidth()*.8, ofGetWindowHeight()*.063);
             ofSetColor(ofColor::white);
         }
@@ -364,6 +369,13 @@ void GameManager::draw()
         }
         delayCounter --;
     }
+
+}
+
+void GameManager::getBookFromCode()
+{
+    int deci = QASetTexts[setCounter].getDecade();
+    char
 
 }
 

@@ -20,6 +20,7 @@ public:
 
 private:
     void setScoreString();
+    void getBookFromCode();
 
     AnswerManager answerMan;
     QuestionManager questionMan;
@@ -36,5 +37,6 @@ private:
     int posScore;
     bool setScoreAlready;
     std::string scorestr;
+    std::string bookName;
     bool won;
 };

@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1410289394 source:c:\openframeworks\apps\apushtechtime\techtime\icon.rc
 
-1431971717 source:c:\openframeworks\apps\apushtechtime\techtime\src\answer.cpp
+1431983465 source:c:\openframeworks\apps\apushtechtime\techtime\src\answer.cpp
 	"Answer.h"
 
 1431971717 c:\openframeworks\apps\apushtechtime\techtime\src\answer.h
@@ -1491,14 +1491,14 @@
 1431971717 source:c:\openframeworks\apps\apushtechtime\techtime\src\ofapp.cpp
 	"ofApp.h"
 
-1431983344 source:c:\openframeworks\apps\apushtechtime\techtime\src\answermanager.cpp
+1432318011 source:c:\openframeworks\apps\apushtechtime\techtime\src\answermanager.cpp
 	"AnswerManager.h"
 
 1431971717 c:\openframeworks\apps\apushtechtime\techtime\src\answermanager.h
 	"ofMain.h"
 	"Answer.h"
 
-1431971717 source:c:\openframeworks\apps\apushtechtime\techtime\src\question.cpp
+1431983465 source:c:\openframeworks\apps\apushtechtime\techtime\src\question.cpp
 	"Question.h"
 
 1431971717 c:\openframeworks\apps\apushtechtime\techtime\src\question.h
@@ -1517,7 +1517,7 @@
 	"QuestionManager.h"
 	"TriviaSet.h"
 
-1431971717 source:c:\openframeworks\apps\apushtechtime\techtime\src\gamemanager.cpp
+1432837436 source:c:\openframeworks\apps\apushtechtime\techtime\src\gamemanager.cpp
 	"GameManager.h"
 	<sstream>
 
@@ -1525,5 +1525,60 @@
 	"ofMain.h"
 
 1431539521 source:c:\openframeworks\apps\apushtechtime\techtime\src\triviaset.cpp
+	"TriviaSet.h"
+
+1410289394 source:c:\openframeworks\apps\englishproject\techtime\icon.rc
+
+1431983465 source:c:\openframeworks\apps\englishproject\techtime\src\answer.cpp
+	"Answer.h"
+
+1431971717 c:\openframeworks\apps\englishproject\techtime\src\answer.h
+	"ofMain.h"
+
+1432318011 source:c:\openframeworks\apps\englishproject\techtime\src\answermanager.cpp
+	"AnswerManager.h"
+
+1431971717 c:\openframeworks\apps\englishproject\techtime\src\answermanager.h
+	"ofMain.h"
+	"Answer.h"
+
+1432925812 source:c:\openframeworks\apps\englishproject\techtime\src\gamemanager.cpp
+	"GameManager.h"
+	<sstream>
+
+1432925812 c:\openframeworks\apps\englishproject\techtime\src\gamemanager.h
+	"ofMain.h"
+	"AnswerManager.h"
+	"QuestionManager.h"
+	"TriviaSet.h"
+
+1431971717 c:\openframeworks\apps\englishproject\techtime\src\questionmanager.h
+	"ofMain.h"
+	"Question.h"
+
+1431971717 c:\openframeworks\apps\englishproject\techtime\src\question.h
+	"ofMain.h"
+
+1431539521 c:\openframeworks\apps\englishproject\techtime\src\triviaset.h
+	"ofMain.h"
+
+1431971717 source:c:\openframeworks\apps\englishproject\techtime\src\main.cpp
+	"ofMain.h"
+	"ofApp.h"
+
+1431971717 c:\openframeworks\apps\englishproject\techtime\src\ofapp.h
+	"ofMain.h"
+	"GameManager.h"
+
+1431971717 source:c:\openframeworks\apps\englishproject\techtime\src\ofapp.cpp
+	"ofApp.h"
+
+1431983465 source:c:\openframeworks\apps\englishproject\techtime\src\question.cpp
+	"Question.h"
+
+1431971717 source:c:\openframeworks\apps\englishproject\techtime\src\questionmanager.cpp
+	"QuestionManager.h"
+
+1431539521 source:c:\openframeworks\apps\englishproject\techtime\src\triviaset.cpp
 	"TriviaSet.h"
 
