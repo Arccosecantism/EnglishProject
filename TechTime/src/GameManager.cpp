@@ -375,7 +375,7 @@ void GameManager::draw()
 void GameManager::getBookFromCode()
 {
     int deci = QASetTexts[setCounter].getDecade();
-    char
+   // char
 
 }
 
