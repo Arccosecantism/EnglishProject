@@ -32,14 +32,14 @@ GameManager::GameManager()
 
     fillQATexts();
 
-    setCounter = 0;
+    setCounter = 20;
     setAllText(setCounter);
     delayCounter = -1;
-    answered = 0;
+    answered = 20;
     threeTimePause = 0;
     won = false;
-    score = 0;
-    posScore = 0;
+    score = 20;
+    posScore = 20;
     setScoreAlready = false;
     setScoreString();
     getBookFromCode();

@@ -1,24 +1,1314 @@
 -n-
-QQA
-Test Question; answer is 5.
+QQO
+Who wrote Of Mice and Men?
+-.-
+AA
+**John Steinbeck
+-&-
+Mark Twain
+-&-
+Marjane Satrapi
+-&-
+George Orwell
+-&-
+William Shakespeare
+-&-
+Rodney Maack
+-&-
+Ray Bradbury
+-&-
+William Golding
+-.-
+
+-n-
+QQO
+What state is the entire book set in?
+-.-
+AA
+**California
+-&-
+Oregon
+-&-
+Washington
+-&-
+Virginia
+-&-
+Arizona
+-&-
+New Mexico
+-&-
+Nevada
+-&-
+Idaho
+-.-
+
+
+-n-
+QQO
+There are two main characters. One is stupid. What is his name (spelled correctly)?
+-.-
+AA
+**Lennie
+-&-
+George
+-&-
+Lenie
+-&-
+Lenny
+-&-
+Leny
+-&-
+Gorge
+-&-
+Goerge
+-&-
+Lenney
+-.-
+
+
+-n-
+QQO
+What is Lennie's aunt's name?
+-.-
+AA
+**Clara
+-&-
+Anna
+-&-
+Olga
+-&-
+Susan
+-&-
+Mary
+-&-
+Hilda
+-&-
+Madeline
+-&-
+Flora
+-.-
+
+
+-n-
+QQO
+How did Lennie accidentally scare a girl?
+-.-
+AA
+**By grabbing onto her red dress
+-&-
+By professing his love to her
+-&-
+By swatting a fly that landed on her
+-&-
+By running after her
+-&-
+By showing her a dead mammal
+-&-
+By beating up a stranger
+-&-
+By losing his temper and yelling
+-&-
+By ogling her
+-.-
+
+-n-
+QQO
+In what city is the ranch?
+-.-
+AA
+**Soledad
+-&-
+Weed
+-&-
+San Diego
+-&-
+Oakland
+-&-
+San Francisco
+-&-
+Los Angeles
+-&-
+Sacramento
+-&-
+San Jose
+-.-
+
+-n-
+QQO
+Who is the first character George and Lennie meet on the ranch?
+-.-
+AA
+**Candy
+-&-
+The Boss
+-&-
+Slim
+-&-
+Carlson
+-&-
+Curley
+-&-
+Curley's wife
+-&-
+Whit
+-&-
+Crooks
+-.-
+
+-n-
+QQO
+What city did George and Lennie previously work at before the ranch?
+-.-
+AA
+**Weed
+-&-
+San Diego
+-&-
+San Francisco
+-&-
+Los Angeles
+-&-
+Sacramento
+-&-
+San Jose
+-&-
+Oakland
+-&-
+Soledad
+-.-
+
+
+
+
+-n-
+QQO
+George tells Slim he used to do something to Lennie that he now regrets. What was it?
+-.-
+AA
+**Playing pranks on him
+-&-
+Sexually abusing him
+-&-
+Punishing him for his stupidity
+-&-
+Emotionally abusing him
+-&-
+Teasing him
+-&-
+Taking advantage of him
+-&-
+Slapping him
+-&-
+Taking away things Lennie likes
+-.-
+
+-n-
+QQO
+What animal does Slim give to Lennie?
+-.-
+AA
+**A puppy
+-&-
+An old dog
+-&-
+A mouse
+-&-
+A rabbit
+-&-
+A snake
+-&-
+An old cat
+-&-
+A kitten
+-&-
+A parrot
+-.-
+
+-n-
+QQO
+Who urges Candy to kill his dog the most?
+-.-
+AA
+**Carlson
+-&-
+Whit
+-&-
+Slim
+-&-
+George
+-&-
+Curley
+-&-
+Curley's wife
+-&-
+The Boss
+-&-
+Lennie
+-.-
+
+-n-
+QQO
+How does Curley break his hand?
+-.-
+AA
+**Lennie breaks it accidentally
+-&-
+He gets it caught in a machine
+-&-
+His wife breaks it
+-&-
+He overworks himself
+-&-
+He gets hurt in a boxing match
+-&-
+It gets shot in a hunting accident
+-&-
+Candy's dog bites it
+-&-
+George breaks it
+-.-
+
+
+-n-
+QQO
+After most of the workers go to the local “cathouse,” where does Lennie go?
+-.-
+AA
+**To Crooks's room
+-&-
+Back to the river where George told him to go
+-&-
+To Curley's wife's room
+-&-
+To George and his piece of land
+-&-
+To talk to the boss about George
+-&-
+To the fields to continue working
+-&-
+To Candy's house
+-&-
+To see his kitten
+-.-
+
+-n-
+QQO
+What does Curley's wife jokingly say she likes to Lennie?
+-.-
+AA
+**Machines
+-&-
+Dogs
+-&-
+Cats
+-&-
+Children
+-&-
+Curley
+-&-
+Loneliness
+-&-
+The ranch
+-&-
+Money
+-.-
+
+
+-n-
+QQO
+What is the best reason that Curley's wife flirts with the workers?
+-.-
+AA
+**She is lonely
+-&-
+Her husband is dead
+-&-
+She wants to anger her husband
+-&-
+She is romantically interested in Slim
+-&-
+She wants to get them in trouble with the boss
+-&-
+She wants to not have to work
+-&-
+She is bored
+-&-
+She wants to take advantage of them
+-.-
+
+
+-n-
+QQO
+How does Lennie get in trouble and have to run back to the spot George told him to?
+-.-
+AA
+**He accidentally kills Curley's wife
+-&-
+He kills George because he is fed up with him
+-&-
+He murders Slim
+-&-
+He accidentally kills Curley
+-&-
+He accidentally kills his puppy
+-&-
+He steals some money
+-&-
+He burns down the bunkhouse accidentally
+-&-
+He has an affair with Curley's wife
+-.-
+
+-n-
+QQO
+How does Lennie die?
+-.-
+AA
+**George shoots him in the back of the head
+-&-
+Curley's wife poisons him
+-&-
+Curley shoots him
+-&-
+Slim shoots him
+-&-
+Carlson tosses him into a river
+-&-
+He gets shot by law enforcement
+-&-
+He is tried and executed
+-&-
+He starves to death
+-.-
+
+-n-
+QQO
+Who is the only person except for George who knows the truth behind Lennie's death?
+-.-
+AA
+**Slim
+-&-
+Curley
+-&-
+Whit
+-&-
+Carlson
+-&-
+Candy
+-&-
+The boss
+-&-
+Lennie; his death was faked
+-&-
+Curley's wife
+-.-
+
+-n-
+QQO
+What is often said the overarching theme of Of Mice and Men is?
+-.-
+AA
+**The lie of the American dream
+-&-
+The grandeur of the American dream
+-&-
+The vileness of women
+-&-
+What goes around comes around
+-&-
+Fate
+-&-
+Free will
+-&-
+The indifference of nature and god
+-&-
+The benefits of socialism
+-.-
+
+-n-
+QQO
+Which writer inspired the title of this book?
+-.-
+AA
+**Robert Burns
+-&-
+William Shakespeare
+-&-
+George Orwell
+-&-
+Mark Twain
+-&-
+John Keats
+-&-
+Homer
+-&-
+Jean-Paul Sartre
+-&-
+Friedrich Nietzsche
+-.-
+
+
+
+-n-
+QQF
+Who is the author of Fahrenheit 451?
+-.-
+AA
+**Ray Bradbury
+-&-
+Ray Comfort
+-&-
+Rodney Maack
+-&-
+George Orwell
+-&-
+John Steinbeck
+-&-
+Ernest Hemingway
+-&-
+Steven King
+-&-
+Kurt Vonnegut
+-.-
+
+-n-
+QQF
+What are the earpieces Montag uses to communicate with Faber called?
+-.-
+AA
+**Green bullet
+-&-
+The conch
+-&-
+Radio
+-&-
+Walkie Talkie
+-&-
+Telepathy
+-&-
+Bluetooth
+-&-
+Seashells
+-&-
+Oysters
+-.-
+
+-n-
+QQF
+Which character has a spectacular knowledge of literature but still strongly opposes books?
+-.-
+AA
+**Captain Beatty
+-&-
+Guy Montag
+-&-
+Mildred Montag
+-&-
+Faber
+-&-
+Granger
+-&-
+Clarisse
+-&-
+Stoneman
+-&-
+Black
+-.-
+
+-n-
+QQF
+Which character acts emotionlessly in regards to his or her third spouse being sent off to war?
+-.-
+AA
+**Mrs. Phelps
+-&-
+Mildred
+-&-
+Montag
+-&-
+Mrs. Bowles
+-&-
+Captain Beatty
+-&-
+Mrs. Webber
+-&-
+Faber
+-&-
+Mrs. Crell
+-.-
+
+-n-
+QQF
+How old is Clarisse?
+-.-
+AA
+**17
+-&-
+16
+-&-
+15
+-&-
+18
+-&-
+22
+-&-
+25
+-&-
+21
+-&-
+32
+-.-
+
+-n-
+QQF
+What were the occupations of Stoneman and Black?
+-.-
+AA
+**Firemen
+-&-
+Police officers
+-&-
+Librarians
+-&-
+News anchors
+-&-
+Soldiers
+-&-
+Teachers
+-&-
+Mechanics
+-&-
+Sculptors
+-.-
+
+-n-
+QQF
+Which of the following happens in Part 1 (“The Hearth and the Salamander”)?
+-.-
+AA
+**Mildred overdoses on sleeping pills
+-&-
+Montag kills Beatty
+-&-
+Mildred refuses to talk about Clarisse because she is dead
+-&-
+Montag visits Faber
+-&-
+Mildred visits Faber
+-&-
+Montag reads “Dover Beach”
+-&-
+Montag tells Clarisse that firemen had originally put out fires
+-&-
+Montag hides stolen books under his mattress
+-.-
+
+-n-
+QQF
+What occupation did Granger's grandfather have?
+-.-
+AA
+**Sculptor
+-&-
+Fireman
+-&-
+Librarian
+-&-
+English teacher
+-&-
+Painter
+-&-
+Engineer
+-&-
+Inventor
+-&-
+Plumber
+-.-
+
+-n-
+QQF
+What device is used to pump stomachs?
+-.-
+AA
+**Electric-eyed snake
+-&-
+Vacuum
+-&-
+Electric-eyed python
+-&-
+Ackle tube
+-&-
+Thestler
+-&-
+Cobra
+-&-
+Kale
+-&-
+Seashell
+-.-
+
+-n-
+QQF
+Which book is Montag responsible for keeping memorized?
+-.-
+AA
+**The Book of Ecclesiastes
+-&-
+The Book of Job
+-&-
+The Book of John
+-&-
+Gulliver's Travels
+-&-
+Dover Beach
+-&-
+Julius Caeser
+-&-
+Uncle Tom's Cabin
+-&-
+Alice in Wonderland
+-.-
+
+-n-
+QQF
+To which creature does Montag compare mankind at the end?
+-.-
+AA
+**Phoenix
+-&-
+Salamander
+-&-
+Snake
+-&-
+Hound
+-&-
+Raven
+-&-
+Centaur
+-&-
+Scylles
+-&-
+Hydra
+-.-
+
+-n-
+QQF
+What body part is used as a motif?
+-.-
+AA
+**Hands
+-&-
+Feet
+-&-
+Head
+-&-
+Eyes
+-&-
+Brain
+-&-
+Elbow
+-&-
+Ears
+-&-
+Teeth
+-.-
+
+-n-
+QQF
+What are the interactive TVs called?
+-.-
+AA
+**Parlor Walls
+-&-
+CRTs
+-&-
+Monitors
+-&-
+Tablets
+-&-
+Lounge Screen
+-&-
+Salon Cams
+-&-
+Fireplaces
+-&-
+Lobby Stall
+-.-
+
+-n-
+QQF
+What discussion topic causes Montag to read a poem to Mildred's friends.
+-.-
+AA
+**War
+-&-
+Books
+-&-
+Firemen
+-&-
+Cars
+-&-
+Work
+-&-
+Money
+-&-
+Fear
+-&-
+Divorced husbands
+-.-
+
+-n-
+QQF
+What year was Fahrenheit 451 initially published?
+-.-
+AA
+**1953
+-&-
+1951
+-&-
+1960
+-&-
+1954
+-&-
+1955
+-&-
+1976
+-&-
+1934
+-&-
+1950
+-.-
+
+-n-
+QQF
+How do Montag and Granger stay up to date on "Montag's" chase?
+-.-
+AA
+**Portable TV
+-&-
+Radio
+-&-
+Seashells
+-&-
+Talking to Faber
+-&-
+Voodoo
+-&-
+They don't
+-&-
+Reports from Granger's associate
+-&-
+Cellphone
+-.-
+
+-n-
+QQF
+What does Granger do to help Montag not get tracked by the hound?
+-.-
+AA
+**Gives him a liquid to drink
+-&-
+Replaces his clothes
+-&-
+Sacrifices himself as a distraction
+-&-
+Sets off explosions as a diversion
+-&-
+Gives him pills
+-&-
+Washes him in the river
+-&-
+Covers Montag in his own sweat
+-&-
+Hides Montag
+-.-
+
+-n-
+QQF
+Who nearly kills Montag with his/her/their car?
+-.-
+AA
+**Children
+-&-
+The police
+-&-
+The military
+-&-
+Mildred
+-&-
+Captain Beatty
+-&-
+Stoneman
+-&-
+Faber
+-&-
+The paramedics
+-.-
+
+-n-
+QQF
+Where does Faber tell Montag to meet him sometime in the future?
+-.-
+AA
+**St. Louis
+-&-
+New York City
+-&-
+Baltimore
+-&-
+Chicago
+-&-
+Detroit
+-&-
+Los Angeles
+-&-
+San Francisco
+-&-
+Phoenix
+-.-
+
+-n-
+QQM
+Where is the majority of the plot set?
+-.-
+AA
+**Scotland
+-&-
+Bath, England
+-&-
+Paris, France
+-&-
+Ireland
+-&-
+London, England
+-&-
+Rome, Italy
+-&-
+Athens, Greece
+-&-
+Cadiz, Spain
+-.-
+
+-n-
+QQM
+Who is the main character of the play?
+-.-
+AA
+**Macbeth
+-&-
+Guy Montag
+-&-
+King Duncan
+-&-
+George Milton
+-&-
+Malcolm
+-&-
+Marji Satrapi
+-&-
+Lennox
+-&-
+Lennie Small
+-.-
+
+-n-
+QQM
+What new title does Macbeth receive in Act one, scene 2?
+-.-
+AA
+**Thane of Cawdor
+-&-
+Thane of Ross
+-&-
+Thane of Glamis
+-&-
+King of Scotland
+-&-
+King of Ireland
+-&-
+Duke of Scotland
+-&-
+Earl of Cawdor
+-&-
+Scottish Baron
+-.-
+
+-n-
+QQM
+Early on in the play, who tells the king that the Thane of Cawdor has been defeated?
+-.-
+AA
+**Ross
+-&-
+Macbeth
+-&-
+Banquo
+-&-
+Lady Macbeth 
+-&-
+Macduff
+-&-
+Malcolm
+-&-
+Fleance
+-&-
+Donalbain
+-.-
+
+-n-
+QQM
+Who does King Duncan name as his successor?
+-.-
+AA
+**Malcolm
+-&-
+Macbeth
+-&-
+Macduff
+-&-
+Banquo
+-&-
+Fleance
+-&-
+Seyton
+-&-
+Ross
+-&-
+Donalbain
+-.-
+
+-n-
+QQM
+What object does Macbeth imagine he sees floating in front of him as he goes to kill Duncan?
+-.-
+AA
+**A bloody dagger
+-&-
+A picture of himself
+-&-
+A candelabra
+-&-
+The king's crown 
+-&-
+A puppet
+-&-
+A sword
+-&-
+A small, dead animal
+-&-
+A stuffed doll
+-.-
+
+-n-
+QQM
+Who finds Duncan's body?
+-.-
+AA
+**Macduff
+-&-
+Banquo
+-&-
+Malcolm
+-&-
+Macduff's son
+-&-
+The Three Witches
+-&-
+The guards
+-&-
+Fleance
+-&-
+Seyton
+-.-
+
+-n-
+QQM
+Who presents Macbeth with the title of Thane of Cawdor after the witches say their prophecy?
+-.-
+AA
+**Ross
+-&-
+Banquo
+-&-
+Macduff
+-&-
+Lady Macbeth
+-&-
+Malcolm
+-&-
+Seyton
+-&-
+Fleance
+-&-
+Donalbain
+-.-
+
+-n-
+QQM
+Where is Macbeth's castle located?
+-.-
+AA
+**Inverness
+-&-
+Edinburgh
+-&-
+Falkirk
+-&-
+Glasgow
+-&-
+Dundee
+-&-
+Aberdeen
+-&-
+Perth
+-&-
+Stirling
+-.-
+
+-n-
+QQM
+Who says “fair is foul and foul is fair”?
+-.-
+AA
+**The three witches
+-&-
+Lady Macbeth
+-&-
+Macbeth
+-&-
+King Duncan
+-&-
+Macduff
+-&-
+Donalbain
+-&-
+Banquo's ghost
+-&-
+Banquo
+-.-
+
+-n-
+QQM
+What does Macbeth see at the banquet table?
+-.-
+AA
+**A ghost of Banquo
+-&-
+A floating crown
+-&-
+A bloody dagger
+-&-
+A dead body
+-&-
+A human skull
+-&-
+A severed horse's head
+-&-
+A clock spinning in reverse 
+-&-
+A flashing light
+-.-
+
+
+-n-
+QQM
+Macbeth ordered whose wife and and children to be killed?
+-.-
+AA
+**Macduff
+-&-
+Fleance
+-&-
+Banquo
+-&-
+King Duncan
+-&-
+Malcolm
+-&-
+Donalbain
+-&-
+Ross
+-&-
+Seyton
+-.-
+
+-n-
+QQM
+What were the names of King Duncan's sons?
+-.-
+AA
+**Donalbain and Malcolm
+-&-
+Fleance and Malcolm
+-&-
+Banquo and Donalbain
+-&-
+Banquo and Fleance
+-&-
+Malcolm and Macduff
+-&-
+Donalbain and Ross
+-&-
+Ross and Seyton
+-&-
+Seyton and Fleance
+-.-
+
+-n-
+QQM
+Which character was beheaded at the end of the play?
+-.-
+AA
+**Macbeth
+-&-
+King Duncan
+-&-
+Malcolm
+-&-
+Banquo
+-&-
+Macduff
+-&-
+Donalbain
+-&-
+Ross
+-&-
+Seyton
+-.-
+
+-n-
+QQM
+How many acts are in Macbeth?
 -.-
 AA
 **5
 -&-
+1
+-&-
 4
--&-
-2
--&-
-3
 -&-
 6
 -&-
-1
+3
 -&-
-(1+sqrt(5))/2
+11
 -&-
-100000
+7
+-&-
+2.5
 -.-
+
+-n-
+QQM
+What is Birnam?
+-.-
+AA
+**A forest
+-&-
+A crown
+-&-
+A sword
+-&-
+Macbeth's pet
+-&-
+A type of meat
+-&-
+A kind of metal
+-&-
+A river
+-&-
+The dagger Macbeth uses to kill Duncan
+-.-
+
+-n-
+QQM
+Who becomes king at the end of the play?
+-.-
+AA
+**Malcolm
+-&-
+Macbeth
+-&-
+Nobody
+-&-
+Banquo
+-&-
+Duncan
+-&-
+Fleance
+-&-
+Donalbain
+-&-
+Macduff
+-.-
+
+-n-
+QQM
+Where do Malcolm and Donalbain flee to after King Duncan is murdered?
+-.-
+AA
+**Malcolm goes to England, Donalbain to Ireland
+-&-
+Malcolm goes to Ireland, Donalbain to England
+-&-
+They both go to Ireland 
+-&-
+They both go to Scotland
+-&-
+They both go to Denmark
+-&-
+Malcolm secretly stays in Scotland, Donalbain goes to Ireland
+-&-
+Donalbain goes to Paris, Malcolm to Denmark
+-&-
+They both go to England
+-.-
+
+-n-
+QQM
+Why does Malcolm order the soldiers to cut a branch from Birnam Wood and carry it to Dunsinane?
+-.-
+AA
+**To hide the size of the army
+-&-
+To fulfill the prophecy 
+-&-
+To use as weapons 
+-&-
+To use as shields 
+-&-
+To plant around Dunsinane
+-&-
+To use as fuel for a fire
+-&-
+To make shelters for the night
+-&-
+To indicate where the trebuchets should aim
+-.-
+
+
+-n-
+QQM
+How does Macbeth persuade the murderers to kill Banquo?
+-.-
+AA
+**He taunts their masculinity 
+-&-
+He threatens to execute them
+-&-
+He holds their children hostage
+-&-
+He breaks one of their hands as a demonstration 
+-&-
+He holds them at sword-point
+-&-
+He drugs them
+-&-
+He pays them
+-&-
+He bribes them with riches
+-.-
+
 
 
 -end
