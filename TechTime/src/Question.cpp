@@ -85,13 +85,14 @@ void Question::draw()
     ofSetColor(ofColor::black);
     font->drawString(text, temp.x, temp.y);
     ofSetColor(ofColor::white);
-//    std::cout << answered << std::endl;
+    //std::cout << answered << std::endl;
     if (answered == 1)
     {
         wrongAns->draw(TLpos, drawsize.x, drawsize.y);
     }
     else if (answered == 2)
     {
+       // std::cout << "here" << std::endl;
         rightAns->draw(TLpos, drawsize.x, drawsize.y);
     }
 

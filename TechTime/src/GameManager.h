@@ -32,7 +32,7 @@ private:
     int delayCounter;
     int setCounter;
     int answered;
-    int threeTimePause;
+    bool setDelay;
     int score;
     int posScore;
     bool setScoreAlready;

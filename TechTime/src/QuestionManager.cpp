@@ -97,6 +97,7 @@ void QuestionManager::update()
     {
         questionVector[i].update();
         questionVector[i].setAnswered(answered);
+       // std::cout << answered << std::endl;
     }
 }
 

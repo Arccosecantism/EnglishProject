@@ -36,7 +36,7 @@ GameManager::GameManager()
     setAllText(setCounter);
     delayCounter = -1;
     answered = 0;
-    threeTimePause = 0;
+    setDelay = false;
     won = false;
     score = 0;
     posScore = 0;
@@ -285,7 +285,62 @@ void GameManager::setAllText(int trivset)
 
 void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& mouseButton)
 {
-    if (delayCounter < 0)
+
+
+    if (delayCounter == 0)
+    {
+        setScoreAlready = false;
+        if (won == false)
+        {
+            if (setCounter == QASetTexts.size() - 1)
+            {
+                won = true;
+            }
+            else
+            {
+                setCounter ++;
+                if (goodCode != 'A')
+                {
+                    while (QASetTexts[setCounter].getDecade() != goodCode and setCounter < QASetTexts.size() - 1)
+                    {
+                        setCounter ++;
+                    }
+                }
+
+                if (setCounter == QASetTexts.size() - 1)
+                {
+                    won = true;
+                }
+            }
+
+        }
+        answerMan.resetAnswers();
+        questionMan.resetQuestions();
+        setAllText(setCounter);
+
+
+        if (setCounter != 0)
+        {
+           if (answered == 2)
+            {
+                score ++;
+            }
+            posScore ++;
+            setScoreString();
+        }
+        delayCounter --;
+    }
+
+    else if (delayCounter > 0)
+    {
+        delayCounter --;
+        if (clicked == true)
+        {
+            delayCounter = 0;
+        }
+    }
+
+    else if (delayCounter < 0)
     {
         if (setCounter == 0)
         {
@@ -294,49 +349,28 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
 
         }
         answered = answerMan.getAnswered();
-        answerMan.update(mousePos, clicked, pressed, mouseButton);
-        questionMan.update();
         questionMan.setAnswered(answered);
-        if (threeTimePause > 2)
-        {
-            delayCounter = 150;
-            ofSetBackgroundAuto(false);
-        }
+
+
         if (answered != 0)
         {
-            threeTimePause ++;
+            delayCounter = 100;
             answerMan.setShowCorrect(true);
-            if (setScoreAlready == false)
-            {
-                setScoreAlready = true;
-                if (setCounter != 0)
-                {
-                   if (answered == 2)
-                    {
-                        score ++;
-                    }
-                    posScore ++;
-                    setScoreString();
-                }
-            }
         }
 
+        questionMan.update();
+        answerMan.update(mousePos, clicked, pressed, mouseButton);
     }
-    else
-    {
-        if (clicked == true and delayCounter > 3)
-        {
-            delayCounter = 3;
-        }
-        delayCounter --;
-    }
+ //   std::cout << questionMan.getAnswered() << std::endl;
 
-};
+
+
+
+
+}
 
 void GameManager::draw()
 {
-    if (delayCounter < 0)
-    {
         if (won == false)
         {
             getBookFromCode();
@@ -353,47 +387,6 @@ void GameManager::draw()
         {
             WinScreen.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
         }
-    }
-    else
-    {
-        if (delayCounter == 1 or delayCounter == 0)
-        {
-            setScoreAlready = false;
-            ofSetBackgroundAuto(true);
-            delayCounter = -5;
-            threeTimePause = 0;
-            if (won == false)
-            {
-                if (setCounter == QASetTexts.size() - 1)
-                {
-                    won = true;
-                }
-                else
-                {
-                    setCounter ++;
-                    if (goodCode != 'A')
-                    {
-                        while (QASetTexts[setCounter].getDecade() != goodCode and setCounter < QASetTexts.size() - 1)
-                        {
-                            setCounter ++;
-                        }
-                    }
-
-                    if (setCounter == QASetTexts.size() - 1)
-                    {
-                        won = true;
-                    }
-
-                }
-                answerMan.resetAnswers();
-                questionMan.resetQuestions();
-                setAllText(setCounter);
-
-            }
-        }
-        delayCounter --;
-    }
-
 }
 
 void GameManager::getBookFromCode()
