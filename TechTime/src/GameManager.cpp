@@ -290,6 +290,15 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
     if (delayCounter == 0)
     {
         setScoreAlready = false;
+        if (setCounter != 0)
+        {
+           if (answered == 2)
+            {
+                score ++;
+            }
+            posScore ++;
+            setScoreString();
+        }
         if (won == false)
         {
             if (setCounter == QASetTexts.size() - 1)
@@ -319,15 +328,7 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
         setAllText(setCounter);
 
 
-        if (setCounter != 0)
-        {
-           if (answered == 2)
-            {
-                score ++;
-            }
-            posScore ++;
-            setScoreString();
-        }
+
         delayCounter --;
     }
 

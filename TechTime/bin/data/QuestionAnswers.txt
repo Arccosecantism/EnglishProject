@@ -644,6 +644,30 @@ Inventor
 Plumber
 -.-
 
+
+-n-
+QQF
+What does Mildred say happened to Clarisse?
+-.-
+AA
+**She was hit by a car
+-&-
+She ran away
+-&-
+She moved to a different city
+-&-
+She was put in a mental institution
+-&-
+She was put in jail
+-&-
+She committed suicide
+-&-
+She overdosed on sleeping pills
+-&-
+She was murdered
+-.-
+
+
 -n-
 QQF
 What device is used to pump stomachs?
@@ -1326,6 +1350,915 @@ He drugs them
 He pays them
 -&-
 He bribes them with riches
+-.-
+
+
+
+-n-
+QQL
+Who first blows the conch shell to signal to the other boys?
+-.-
+AA
+**Ralph
+-&-
+Piggy
+-&-
+Simon
+-&-
+Jack
+-&-
+Sam
+-&-
+Eric
+-&-
+Roger
+-&-
+Johney
+-.-
+
+
+-n-
+QQL
+Who is elected as the leaders of the boys?
+-.-
+AA
+**Ralph
+-&-
+Sam
+-&-
+Piggy
+-&-
+Jack
+-&-
+Sam
+-&-
+Eric
+-&-
+Joe
+-&-
+Roger
+-.-
+
+-n-
+QQL
+Where do the boys decide to build a signal fire?
+-.-
+AA
+**On top of the mountain
+-&-
+At the beach
+-&-
+At castle rock
+-&-
+By the scar
+-&-
+In the clearing
+-&-
+In the ocean
+-&-
+In the crashed plane
+-&-
+Underground
+-.-
+
+-n-
+QQL
+How do the boys start the fire?
+-.-
+AA
+**Piggy's glasses
+-&-
+Rubbing wood
+-&-
+Lighter
+-&-
+Flint and steel
+-&-
+Lightning
+-&-
+Gunfire
+-&-
+Atomic bomb
+-&-
+Summoning the fire god
+-.-
+
+-n-
+QQL
+Who helps Ralph build the huts?
+-.-
+AA
+**Simon
+-&-
+The littluns
+-&-
+Jack
+-&-
+Piggy
+-&-
+Sam
+-&-
+Eric
+-&-
+Joe
+-&-
+Jesus
+-.-
+
+-n-
+QQL
+What technique does Jack use to try to kill a pig?
+-.-
+AA
+**Using camouflage on his face
+-&-
+Building a trap
+-&-
+Burning it
+-&-
+Throwing sharp rocks
+-&-
+Shooting it with a gun
+-&-
+Bow and arrow
+-&-
+The bees
+-&-
+Dropping a boulder on it
+-.-
+
+-n-
+QQL
+Why are the boys upset about seeing a ship in the distance?
+-.-
+AA
+**The signal fire has gone out
+-&-
+It is a ship of the enemy
+-&-
+They want to stay out
+-&-
+It sees the fire but sails away
+-&-
+The boys have a bad fear of ships
+-&-
+They are dead so they can't see the ship
+-&-
+The ship is sinking like the titanic
+-&-
+The boys are stupid
+-.-
+
+
+-n-
+QQL
+Where does one boy say the beast might come from?
+-.-
+AA
+**Out of the ocean
+-&-
+From the sky
+-&-
+Out of the mountain
+-&-
+From under the ground
+-&-
+From the wind
+-&-
+Out of the fire
+-&-
+From nowhere
+-&-
+Rodney Maack
+-.-
+
+-n-
+QQL
+What does Jack say about the beast?
+-.-
+AA
+**If there is a beast, his group will kill it
+-&-
+The beast will kill them all
+-&-
+The beast is friendly
+-&-
+The beast will not hurt them
+-&-
+Not to think about the beast
+-&-
+Ralph cannot kill the beast
+-&-
+The beast is afraid of them
+-&-
+The beast is dead
+-.-
+
+-n-
+QQL
+What do the boys mistake for the beast?
+-.-
+AA
+**A dead parachutist
+-&-
+A giant shark
+-&-
+A fiery plane
+-&-
+A pig
+-&-
+A bird
+-&-
+Ralph
+-&-
+The sun
+-&-
+Rodney Maack
+-.-
+
+-n-
+QQL
+Why do the boys go on an expedition to a new area of the island?
+-.-
+AA
+**To find a beast
+-&-
+To find a new area to live
+-&-
+To have fun
+-&-
+To look for food
+-&-
+To murder a littlun
+-&-
+To kill Piggy
+-&-
+To build another fire
+-&-
+To get exercise
+-.-
+
+-n-
+QQL
+Who do the boys use as the boar in the reenactment of their hunt?
+-.-
+AA
+**Robert
+-&-
+Ralph
+-&-
+Piggy
+-&-
+Roger
+-&-
+Rupert
+-&-
+Ryan
+-&-
+Ray
+-&-
+Rodney Maack
+-.-
+
+-n-
+QQL
+What does Ralph do during the hunt?
+-.-
+AA
+**He hits the boar but doesn't kill it
+-&-
+He kills a boar
+-&-
+He runs away in fear
+-&-
+He trips on a root and falls to the ground causing lots of pain
+-&-
+He cries a lot
+-&-
+He discovers his true self
+-&-
+He kills Jack
+-&-
+He dies
+-.-
+
+-n-
+QQL
+Who creates a new tribe?
+-.-
+AA
+**Jack
+-&-
+Roger
+-&-
+Piggy
+-&-
+Ralph
+-&-
+Sam
+-&-
+Eric
+-&-
+Robert
+-&-
+Rodney Maack
+-.-
+
+-n-
+QQL
+Who sees the "Lord of the Flies" talking to him?
+-.-
+AA
+**Simon
+-&-
+Eric
+-&-
+Piggy
+-&-
+Sam
+-&-
+Jack
+-&-
+Ralph
+-&-
+Macbeth
+-&-
+Jesse Maack
+-.-
+
+-n-
+QQL
+What does Jack do when he is asked how he will survive the weather without shelter?
+-.-
+AA
+**He orders his tribe to dance
+-&-
+He tells his followers to build shelters
+-&-
+He tells his followers to tough it out
+-&-
+He doesn't respond
+-&-
+He uses giant umbrellas
+-&-
+He uses a raincoat
+-&-
+He says there will be no rain
+-&-
+He prays to god
+-.-
+
+-n-
+QQL
+Who is the first child to be murdered on the island?
+-.-
+AA
+**Simon
+-&-
+Jack
+-&-
+Roger
+-&-
+Ralph
+-&-
+Piggy
+-&-
+Lennie
+-&-
+Sam
+-&-
+Riley Waugh
+-.-
+
+-n-
+QQL
+Where does the new tribe have their camp?
+-.-
+AA
+**Castle Rock
+-&-
+On top of the mountain
+-&-
+In the clearing
+-&-
+Where the old camp was
+-&-
+By the scar
+-&-
+In a giant tree house
+-&-
+On the coral reef
+-&-
+Under the sea
+-.-
+
+-n-
+QQL
+How does Piggy die?
+-.-
+AA
+**Roger drops a boulder on him
+-&-
+Jack stabs him with a spear
+-&-
+He falls into a hole
+-&-
+He is shot with a gun
+-&-
+He dies of laughter
+-&-
+He has a heart attack
+-&-
+He has a seizure
+-&-
+Mr. Maack’s English Class kills him
+-.-
+
+-n-
+QQL
+How are the boys saved?
+-.-
+AA
+**A naval ship comes to the island
+-&-
+An airplane comes down and saves them
+-&-
+Many boats come on a rescue mission
+-&-
+They build a raft of wood and paddle it thousands of miles to safety
+-&-
+Make a civilization on the island
+-&-
+They discover an endless source of pigs
+-&-
+Their leadership is stable 
+-&-
+Mr. Maack comes in floating on a cloud and saves all of the boys
+-.-
+
+
+
+-n-
+QQP
+Who wrote Persepolis?
+-.-
+AA
+**Marjane Satrapi
+-&-
+Ray Bradbury
+-&-
+John Steinbeck
+-&-
+Rod Maack
+-&-
+Sadegh Hedayat
+-&-
+Bozorg Alavi
+-&-
+Marji Anoosh
+-&-
+Ebi Satrapi
+-.-
+
+-n-
+QQP
+In what country is Persepolis set?
+-.-
+AA
+**Iran
+-&-
+Iraq
+-&-
+Saudi Arabia
+-&-
+Turkey
+-&-
+Yemen
+-&-
+The United States of America
+-&-
+Israel
+-&-
+Austria
+-.-
+
+-n-
+QQP
+Who was the first prophet in Iran?
+-.-
+AA
+**Zarathustra (Zoroaster)
+-&-
+Muhammed
+-&-
+Moses
+-&-
+Jesus Christ
+-&-
+Sunpadh
+-&-
+Mazdak
+-&-
+Baha’u’llah
+-&-
+Lennie
+-.-
+
+-n-
+QQP
+When Marji is six, who is the leader of Iran?
+-.-
+AA
+**The Shah
+-&-
+Ruhollah Khomeini
+-&-
+Ali Khamenei
+-&-
+Mehdi Bazargan
+-&-
+The religious extremists
+-&-
+Hassan Pirnia
+-&-
+Ahmad Shah Qajar
+-&-
+Jimmy Carter
+-.-
+
+-n-
+QQP
+What does Marji do when she find out her grandfather was put into a water-filled cell?
+-.-
+AA
+**She takes a long bath that night
+-&-
+She reads Karl Marx
+-&-
+She goes swimming
+-&-
+She prays
+-&-
+She tries to drown herself
+-&-
+She fasts
+-&-
+She stops drinking water
+-&-
+She laughs uncontrollably
+-.-
+
+-n-
+QQP
+Why can’t Mehri pursue her love interest?
+-.-
+AA
+**She is in a lower class than him
+-&-
+He hates her
+-&-
+She follows Islam
+-&-
+He is an apostate and deserves to die!
+-&-
+He is engaged
+-&-
+He is too poor
+-&-
+He is from Turkey and is a Kurd
+-&-
+She is DEFINITELY  not a terrorist
+-.-
+
+
+-n-
+QQP
+Who does Marji hunt after with a fistful of nails?
+-.-
+AA
+**Ramin
+-&-
+Siamak
+-&-
+Ebi
+-&-
+Her grandfather
+-&-
+Her communist sister
+-&-
+Niloufar
+-&-
+Anoosh
+-&-
+Rodney Maack
+-.-
+
+-n-
+QQP
+Who was found, drowned in his bathtub?
+-.-
+AA
+**Mohsen
+-&-
+Ebi
+-&-
+Siamak
+-&-
+Anoosh
+-&-
+Rodney Maack
+-&-
+Ramin
+-&-
+Marji’s grandfather
+-&-
+Namir
+-.-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-n-
+QQP
+When she was 6, Marji already believed she was a(n)...
+-.-
+AA
+**Prophet
+-&-
+Chef
+-&-
+Revolutionist 
+-&-
+Dancer
+-&-
+Actress
+-&-
+Model
+-&-
+Wizard
+-&-
+Goddess 
+-.-
+
+
+
+
+-n-
+QQP
+In the chapter “The Bicycle” what was burned down with people locked inside?
+-.-
+AA
+**A movie theater
+-&-
+A hotel
+-&-
+A house
+-&-
+A school
+-&-
+A prison
+-&-
+A news studio
+-&-
+A bicycle shop
+-&-
+A shopping mall
+-.-
+
+
+
+-n-
+QQP
+Who was Marji’s grandfather? 
+-.-
+AA
+**A prince
+-&-
+A Chef
+-&-
+A Revolutionist 
+-&-
+A Dancer
+-&-
+God.
+-&-
+A Model
+-&-
+A Wizard
+-&-
+Shaquille O’Neal
+-.-
+
+
+-n-
+QQP
+What year did it become mandatory for Iranian girls to wear veils at school? 
+-.-
+AA
+**1980
+-&-
+1973
+-&-
+1975 
+-&-
+1989
+-&-
+1992
+-&-
+2015
+-&-
+1992
+-&-
+1979
+-.-
+
+-n-
+QQP
+What type of school did Marji attend?
+-.-
+AA
+**French School
+-&-
+Regular Public School
+-&-
+Turkish School
+-&-
+Iraqi School
+-&-
+Swiss School
+-&-
+German School
+-&-
+North Korean School
+-&-
+Woodrow Wilson High School
+-.-
+
+-n-
+QQP
+What country does Marji move to at the end of the book?
+-.-
+AA
+** Austria
+-&-
+France
+-&-
+Israel
+-&-
+Saudi Arabia
+-&-
+England
+-&-
+United States
+-&-
+Morocco
+-&-
+Mars
+-.-
+
+-n-
+QQP
+What article of Neda’s clothing does Marji see to find out she has died?
+-.-
+AA
+**Bracelet
+-&-
+Shirt
+-&-
+Hat
+-&-
+Purse
+-&-
+Necklace
+-&-
+Shoe
+-&-
+Earring
+-&-
+Jean jacket
+-.-
+
+-n-
+QQP
+Who were the only ones allowed to leave the country between the years 1980 and 1983?
+-.-
+AA
+**The sick
+-&-
+Government workers
+-&-
+Children
+-&-
+Women
+-&-
+Men
+-&-
+The wealthy
+-&-
+Retired soldiers
+-&-
+Muslims
+-.-
+
+-n-
+QQP
+What was the previous occupation of the hospital director?
+-.-
+AA
+**Window washer
+-&-
+Secretary
+-&-
+Doctor
+-&-
+Nurse
+-&-
+Professor
+-&-
+Surgeon
+-&-
+Psychologist
+-&-
+Sculptor
+-.-
+
+-n-
+QQP
+Where did Marji’s parents conceal Marji’s posters so they could smuggle them into Iran?
+-.-
+AA
+**Under Marji’s father’s coat’s lining
+-&-
+In the lining of their suitcases
+-&-
+Under Marji’s mother’s veil
+-&-
+In their pockets
+-&-
+They weren’t; her parents just acted natural
+-&-
+In their car
+-&-
+They used a secret mail service
+-&-
+
+
+
+-.-
+
+-n-
+QQP
+What explicitly happened to Ahmadi’s body?
+-.-
+AA
+**It was cut to pieces
+-&-
+It was shipped to his family
+-&-
+It was electrocuted
+-&-
+It was burned in a fire
+-&-
+It was buried
+-&-
+It was mummified
+-&-
+It was hung
+-&-
+It was left to rot
+-.-
+-n-
+QQP
+What was Marji’s favorite comic book?
+-.-
+AA
+**Dialectic Materialism
+-&-
+Cultural Hegemony
+-&-
+Class Consciousness
+-&-
+Asiatic Mode of Production
+-&-
+Proletarian Internationalism
+-&-
+Primitive Capital Accumulation
+-&-
+Anti-Revisionism
+-&-
+De Leonism
 -.-
 
 
