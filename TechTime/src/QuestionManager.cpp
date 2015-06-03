@@ -35,7 +35,7 @@ QuestionManager::QuestionManager()
     for (int i = 0; i < questionNum; i++)
     {
         questionVector.push_back(temp);
-        questionVector[i].setDimensions(ofVec2f(500,500));
+        questionVector[i].setDimensions(ofVec2f(500 * ofGetWindowWidth() / 1600.0, 500 * ofGetWindowHeight() / 1200.0));
     }
 
     defaultFont.loadFont("AlexandriaFLF.ttf", 24);
