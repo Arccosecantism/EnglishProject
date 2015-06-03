@@ -16,6 +16,7 @@ public:
     ofVec2f getDimensions(int i);
     int getAnswered();
     int getAnswerNum();
+    std::string getSelectedText();
 
     void resetAnswers();
     void update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& mouseButton);

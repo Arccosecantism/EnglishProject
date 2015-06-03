@@ -39,4 +39,5 @@ private:
     std::string scorestr;
     std::string bookName;
     bool won;
+    char goodCode;
 };

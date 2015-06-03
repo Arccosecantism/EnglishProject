@@ -1,4 +1,23 @@
 -n-
+QQZ
+Which book would you like to start with?
+-.-
+AA
+**Of Mice and Men
+-&-
+**Persepolis
+-&-
+**Fahrenheit 451
+-&-
+**Macbeth
+-&-
+**Lord of the Flies
+-&-
+**All of them!
+-.-
+
+
+-n-
 QQO
 Who wrote Of Mice and Men?
 -.-

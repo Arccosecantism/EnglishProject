@@ -32,14 +32,14 @@ GameManager::GameManager()
 
     fillQATexts();
 
-    setCounter = 20;
+    setCounter = 0;
     setAllText(setCounter);
     delayCounter = -1;
-    answered = 20;
+    answered = 0;
     threeTimePause = 0;
     won = false;
-    score = 20;
-    posScore = 20;
+    score = 0;
+    posScore = 0;
     setScoreAlready = false;
     setScoreString();
     getBookFromCode();
@@ -75,6 +75,7 @@ void GameManager::fillQATexts()
                 {
 
                     QA = 0;
+
                     QASetTexts[counter].addQuestionText(narrowString(questiontex, questionMan.getDimensions(0).x - 2 * qborder, false));
                     questiontex = "";
                     firstline = true;
@@ -286,6 +287,12 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
 {
     if (delayCounter < 0)
     {
+        if (setCounter == 0)
+        {
+            std::string choice = answerMan.getSelectedText();
+            goodCode = choice[0];
+
+        }
         answered = answerMan.getAnswered();
         answerMan.update(mousePos, clicked, pressed, mouseButton);
         questionMan.update();
@@ -302,12 +309,15 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
             if (setScoreAlready == false)
             {
                 setScoreAlready = true;
-                if (answered == 2)
+                if (setCounter != 0)
                 {
-                    score ++;
+                   if (answered == 2)
+                    {
+                        score ++;
+                    }
+                    posScore ++;
+                    setScoreString();
                 }
-                posScore ++;
-                setScoreString();
             }
         }
 
@@ -329,13 +339,14 @@ void GameManager::draw()
     {
         if (won == false)
         {
+            getBookFromCode();
             GameBG.draw(ofVec2f(0,0), ofGetWindowWidth(), ofGetWindowHeight());
             GameFrame.draw(ofVec2f(0,0),  ofGetWindowWidth(), ofGetWindowHeight());
             answerMan.draw();
             questionMan.draw();
             ofSetColor(ofColor::black);
-            defaultFont.drawString("Book: " + intToString(QASetTexts[setCounter].getDecade()), ofGetWindowWidth()*.025, ofGetWindowHeight()*.063);
-            defaultFont.drawString(scorestr, ofGetWindowWidth()*.8, ofGetWindowHeight()*.063);
+            defaultFont.drawString("Book: " + bookName, ofGetWindowWidth()*.025, ofGetWindowHeight()*.063);
+            defaultFont.drawString(scorestr, ofGetWindowWidth()*.75, ofGetWindowHeight()*.063);
             ofSetColor(ofColor::white);
         }
         else
@@ -359,7 +370,20 @@ void GameManager::draw()
                 }
                 else
                 {
-                   setCounter ++;
+                    setCounter ++;
+                    if (goodCode != 'A')
+                    {
+                        while (QASetTexts[setCounter].getDecade() != goodCode and setCounter < QASetTexts.size() - 1)
+                        {
+                            setCounter ++;
+                        }
+                    }
+
+                    if (setCounter == QASetTexts.size() - 1)
+                    {
+                        won = true;
+                    }
+
                 }
                 answerMan.resetAnswers();
                 questionMan.resetQuestions();
@@ -375,7 +399,30 @@ void GameManager::draw()
 void GameManager::getBookFromCode()
 {
     int deci = QASetTexts[setCounter].getDecade();
-   // char
+    if (deci == 'O')
+    {
+        bookName = "Of Mice and Men";
+    }
+    else if (deci == 'P')
+    {
+        bookName = "Persepolis";
+    }
+    else if (deci == 'L')
+    {
+        bookName = "Lord of the Flies";
+    }
+    else if (deci == 'M')
+    {
+        bookName = "Macbeth";
+    }
+    else if (deci == 'F')
+    {
+        bookName = "Fahrenheit 451";
+    }
+    else
+    {
+        bookName = "???";
+    }
 
 }
 

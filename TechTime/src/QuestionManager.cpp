@@ -30,7 +30,7 @@ QuestionManager::QuestionManager()
         std::cout << "failed to load image Xmark" << std::endl;
     }
 
-    Question temp(ofVec2f(ofGetWindowWidth()/2, .25 * ofGetWindowHeight()), "TEST", defaultFont, questionBackground,
+    Question temp(ofVec2f(ofGetWindowWidth()/2, .32 * ofGetWindowHeight()), "TEST", defaultFont, questionBackground,
                   CMark, XMark);
     for (int i = 0; i < questionNum; i++)
     {

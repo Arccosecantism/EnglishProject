@@ -115,6 +115,11 @@ int Answer::getClickedDataInt(ofVec2f& mousePos, bool& clicked, bool& pressed, i
     return returnme;
 }
 
+std::string Answer::getText()
+{
+    return text;
+}
+
 void Answer::resetCorners()
 {
 

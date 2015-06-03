@@ -136,6 +136,18 @@ int AnswerManager::getAnswerNum()
     return answerNum;
 }
 
+std::string AnswerManager::getSelectedText()
+{
+    for (int i = 0; i < answerVector.size(); i++)
+    {
+        if (answerVector[i].getAnswered() > 0)
+        {
+            return answerVector[i].getText();
+        }
+    }
+    return "failed";
+}
+
 void AnswerManager::resetAnswers()
 {
     for (int i = 0; i < answerVector.size(); i++)

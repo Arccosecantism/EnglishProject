@@ -17,6 +17,7 @@ public:
     ofVec2f getDimensions();
     ofVec2f getTextDrawSpots();
     int getAnswered();
+    std::string getText();
 
     void reset();
     void update(ofVec2f& mousepos, bool& clicked, bool& pressed, int& mouseButton);
