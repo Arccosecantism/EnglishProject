@@ -47,8 +47,8 @@ GameManager::GameManager()
 
 void GameManager::fillQATexts()
 {
-    int aborder = 30;
-    int qborder = 25;
+    int aborder = 35;
+    int qborder = 30;
     std::string questiontex = "";
     std::string answertex = "";
     std::string line;
@@ -301,7 +301,7 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
         }
         if (won == false)
         {
-            if (setCounter == QASetTexts.size() - 1)
+            if (setCounter == QASetTexts.size())
             {
                 won = true;
             }
@@ -310,57 +310,64 @@ void GameManager::update(ofVec2f& mousePos, bool& clicked, bool& pressed, int& m
                 setCounter ++;
                 if (goodCode != 'A')
                 {
-                    while (QASetTexts[setCounter].getDecade() != goodCode and setCounter < QASetTexts.size() - 1)
+                    while (QASetTexts[setCounter].getDecade() != goodCode and setCounter < QASetTexts.size())
                     {
                         setCounter ++;
                     }
+                    if (setCounter == QASetTexts.size())
+                    {
+                        won = true;
+                    }
                 }
 
-                if (setCounter == QASetTexts.size() - 1)
-                {
-                    won = true;
-                }
+
             }
 
         }
         answerMan.resetAnswers();
         questionMan.resetQuestions();
-        setAllText(setCounter);
+        if (won == false)
+        {
+          setAllText(setCounter);setAllText(setCounter);
+        }
 
 
 
         delayCounter --;
     }
 
-    else if (delayCounter > 0)
+    if (won == false)
     {
-        delayCounter --;
-        if (clicked == true)
+        if (delayCounter > 0)
         {
-            delayCounter = 0;
-        }
-    }
-
-    else if (delayCounter < 0)
-    {
-        if (setCounter == 0)
-        {
-            std::string choice = answerMan.getSelectedText();
-            goodCode = choice[0];
-
-        }
-        answered = answerMan.getAnswered();
-        questionMan.setAnswered(answered);
-
-
-        if (answered != 0)
-        {
-            delayCounter = 100;
-            answerMan.setShowCorrect(true);
+            delayCounter --;
+            if (clicked == true)
+            {
+                delayCounter = 0;
+            }
         }
 
-        questionMan.update();
-        answerMan.update(mousePos, clicked, pressed, mouseButton);
+        else if (delayCounter < 0)
+        {
+            if (setCounter == 0)
+            {
+                std::string choice = answerMan.getSelectedText();
+                goodCode = choice[0];
+
+            }
+            answered = answerMan.getAnswered();
+            questionMan.setAnswered(answered);
+
+
+            if (answered != 0)
+            {
+                delayCounter = 100;
+                answerMan.setShowCorrect(true);
+            }
+
+            questionMan.update();
+            answerMan.update(mousePos, clicked, pressed, mouseButton);
+        }
     }
  //   std::cout << questionMan.getAnswered() << std::endl;
 

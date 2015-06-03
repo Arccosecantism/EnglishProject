@@ -780,7 +780,7 @@ Lobby Stall
 
 -n-
 QQF
-What discussion topic causes Montag to read a poem to Mildred's friends.
+What discussion topic causes Montag to read a poem to Mildred's friends?
 -.-
 AA
 **War
@@ -1771,7 +1771,7 @@ He has a heart attack
 -&-
 He has a seizure
 -&-
-Mr. Maack’s English Class kills him
+Mr. Maack's English Class kills him
 -.-
 
 -n-
@@ -1859,7 +1859,7 @@ Sunpadh
 -&-
 Mazdak
 -&-
-Baha’u’llah
+Baha'u'llah
 -&-
 Lennie
 -.-
@@ -1910,7 +1910,7 @@ She laughs uncontrollably
 
 -n-
 QQP
-Why can’t Mehri pursue her love interest?
+Why can't Mehri pursue her love interest?
 -.-
 AA
 **She is in a lower class than him
@@ -1927,7 +1927,7 @@ He is too poor
 -&-
 He is from Turkey and is a Kurd
 -&-
-She is DEFINITELY  not a terrorist
+She is DEFINITELY not a terrorist
 -.-
 
 
@@ -1970,7 +1970,7 @@ Rodney Maack
 -&-
 Ramin
 -&-
-Marji’s grandfather
+Marji's grandfather
 -&-
 Namir
 -.-
@@ -2041,7 +2041,7 @@ A shopping mall
 
 -n-
 QQP
-Who was Marji’s grandfather? 
+Who was Marji's grandfather? 
 -.-
 AA
 **A prince
@@ -2052,13 +2052,13 @@ A Revolutionist
 -&-
 A Dancer
 -&-
-God.
+God
 -&-
 A Model
 -&-
 A Wizard
 -&-
-Shaquille O’Neal
+Shaquille O'Neal
 -.-
 
 
@@ -2130,7 +2130,7 @@ Mars
 
 -n-
 QQP
-What article of Neda’s clothing does Marji see to find out she has died?
+What article of Neda's clothing does Marji see to find out she has died?
 -.-
 AA
 **Bracelet
@@ -2196,31 +2196,29 @@ Sculptor
 
 -n-
 QQP
-Where did Marji’s parents conceal Marji’s posters so they could smuggle them into Iran?
+Where did Marji's parents conceal Marji's posters so they could smuggle them into Iran?
 -.-
 AA
-**Under Marji’s father’s coat’s lining
+**Under Marji's father's coat's lining
 -&-
 In the lining of their suitcases
 -&-
-Under Marji’s mother’s veil
+Under Marji's mother's veil
 -&-
 In their pockets
 -&-
-They weren’t; her parents just acted natural
+They weren't; her parents just acted natural
 -&-
 In their car
 -&-
 They used a secret mail service
 -&-
-
-
-
+Underneath their car
 -.-
 
 -n-
 QQP
-What explicitly happened to Ahmadi’s body?
+What explicitly happened to Ahmadi's body?
 -.-
 AA
 **It was cut to pieces
@@ -2239,9 +2237,10 @@ It was hung
 -&-
 It was left to rot
 -.-
+
 -n-
 QQP
-What was Marji’s favorite comic book?
+What was Marji's favorite comic book?
 -.-
 AA
 **Dialectic Materialism
