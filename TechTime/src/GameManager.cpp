@@ -28,7 +28,7 @@ GameManager::GameManager()
         std::cout << "failed to load image WinScreen" << std::endl;
     }
 
-    defaultFont.loadFont("AlexandriaFLF.ttf", 40);
+    defaultFont.loadFont("AlexandriaFLF.ttf", 35);
 
     fillQATexts();
 
@@ -379,8 +379,8 @@ void GameManager::draw()
             answerMan.draw();
             questionMan.draw();
             ofSetColor(ofColor::black);
-            defaultFont.drawString("Book: " + bookName, ofGetWindowWidth()*.025, ofGetWindowHeight()*.063);
-            defaultFont.drawString(scorestr, ofGetWindowWidth()*.75, ofGetWindowHeight()*.063);
+            defaultFont.drawString("Book: " + bookName, ofGetWindowWidth()*.025, ofGetWindowHeight()*.065);
+            defaultFont.drawString(scorestr, ofGetWindowWidth()*.75, ofGetWindowHeight()*.065);
             ofSetColor(ofColor::white);
         }
         else
